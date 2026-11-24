@@ -1,5 +1,5 @@
 window.RACE_DATA = {
-  "version": "2026-11-24.5",
+  "version": "2026-11-24.6",
   "status": "Provisional 32h34m baseline; optional shared 20min nap reserve",
   "source": "Race Control Data",
   "checkpoints": [
@@ -47,7 +47,7 @@ window.RACE_DATA = {
           "id": "start-1",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare welfare kit and any agreed clothing changes"
+          "label": "Lay out starting clothes and check vest contents against mandatory list"
         },
         {
           "id": "start-2",
@@ -59,31 +59,31 @@ window.RACE_DATA = {
           "id": "start-3",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare Labelled food bag"
+          "label": "Retrieve numbered food bag and check contents against station allocation"
         },
         {
           "id": "start-4",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare filled spare flasks"
+          "label": "Fill and label plain water and electrolyte flasks"
         },
         {
           "id": "start-5",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare waste bag"
+          "label": "Open rubbish bag and place within reach"
         },
         {
           "id": "start-6",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare phone/tracker"
+          "label": "Open tracker on phone and confirm latest position"
         },
         {
           "id": "start-7",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare mandatory kit and start supplies"
+          "label": "Retrieve and set out mandatory kit and start supplies"
         },
         {
           "id": "start-8",
@@ -101,7 +101,7 @@ window.RACE_DATA = {
           "id": "start-10",
           "owner": "Lily",
           "phase": "Before crew departs",
-          "label": "Repack welfare kit and used clothing"
+          "label": "Return dressings, tape, scissors and towel to foot-care box; bag wet clothing separately"
         },
         {
           "id": "start-11",
@@ -113,7 +113,7 @@ window.RACE_DATA = {
           "id": "start-12",
           "owner": "Harry",
           "phase": "Before crew departs",
-          "label": "Confirm next destination and navigation"
+          "label": "Open next crew pin and confirm route before driver sets off"
         }
       ]
     },
@@ -195,7 +195,7 @@ window.RACE_DATA = {
           "id": "crew-01-1",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare welfare kit and any agreed clothing changes"
+          "label": "Keep blister dressings, tape, spare socks and warm layer within reach; unpack only if needed"
         },
         {
           "id": "crew-01-2",
@@ -207,43 +207,43 @@ window.RACE_DATA = {
           "id": "crew-01-3",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare Labelled food bag"
+          "label": "Retrieve numbered food bag and check contents against station allocation"
         },
         {
           "id": "crew-01-4",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare filled spare flasks"
+          "label": "Fill and label plain water and electrolyte flasks"
         },
         {
           "id": "crew-01-5",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare waste bag"
+          "label": "Open rubbish bag and place within reach"
         },
         {
           "id": "crew-01-6",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare phone/tracker"
+          "label": "Open tracker on phone and confirm latest position"
         },
         {
           "id": "crew-01-7",
           "owner": "Harry",
           "phase": "During stop",
-          "label": "Record arrival; offer food and exchange flasks"
+          "label": "Record actual arrival; offer agreed food; collect empty flasks and hand over filled ones"
         },
         {
           "id": "crew-01-8",
           "owner": "Lily",
           "phase": "During stop",
-          "label": "Assess warmth, feet, nausea and alertness"
+          "label": "Ask Ben about cold, foot pain, nausea and dizziness; check alertness and ability to respond normally"
         },
         {
           "id": "crew-01-9",
           "owner": "Lily",
           "phase": "Before Ben departs",
-          "label": "Check welfare and mandatory kit; escalate safety concerns"
+          "label": "Confirm Ben is warm enough, alert and able to continue safely; check any removed mandatory items are back in vest; seek medical help if concerned"
         },
         {
           "id": "crew-01-10",
@@ -261,7 +261,7 @@ window.RACE_DATA = {
           "id": "crew-01-12",
           "owner": "Lily",
           "phase": "Before crew departs",
-          "label": "Repack welfare kit and used clothing"
+          "label": "Return dressings, tape, scissors and towel to foot-care box; bag wet clothing separately"
         },
         {
           "id": "crew-01-13",
@@ -273,7 +273,7 @@ window.RACE_DATA = {
           "id": "crew-01-14",
           "owner": "Harry",
           "phase": "Before crew departs",
-          "label": "Confirm next destination and navigation"
+          "label": "Open next crew pin and confirm route before driver sets off"
         }
       ]
     },
@@ -423,7 +423,7 @@ window.RACE_DATA = {
           "id": "crew-02-1",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare welfare kit and any agreed clothing changes"
+          "label": "Lay out dry socks, towel, blister dressings, tape, scissors, wipes and agreed dry layers"
         },
         {
           "id": "crew-02-2",
@@ -435,103 +435,103 @@ window.RACE_DATA = {
           "id": "crew-02-3",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare Labelled food bag"
+          "label": "Retrieve numbered food bag and check contents against station allocation"
         },
         {
           "id": "crew-02-4",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare filled spare flasks"
+          "label": "Fill and label plain water and electrolyte flasks"
         },
         {
           "id": "crew-02-5",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare waste bag"
+          "label": "Open rubbish bag and place within reach"
         },
         {
           "id": "crew-02-6",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare phone/tracker"
+          "label": "Open tracker on phone and confirm latest position"
         },
         {
           "id": "crew-02-7",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare Reclining chair"
+          "label": "Retrieve and set out Reclining chair"
         },
         {
           "id": "crew-02-8",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare folding table"
+          "label": "Retrieve and set out folding table"
         },
         {
           "id": "crew-02-9",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare blanket or sleeping bag"
+          "label": "Retrieve and set out blanket or sleeping bag"
         },
         {
           "id": "crew-02-10",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare waterproof mat"
+          "label": "Retrieve and set out waterproof mat"
         },
         {
           "id": "crew-02-11",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare foot-care kit"
+          "label": "Open foot-care box; set out clean towel, dressings, tape and scissors"
         },
         {
           "id": "crew-02-12",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare dry socks and layers"
+          "label": "Lay out dry socks and agreed spare base layer"
         },
         {
           "id": "crew-02-13",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare insulated mug and utensils"
+          "label": "Retrieve and set out insulated mug and utensils"
         },
         {
           "id": "crew-02-14",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare prepared food and hot drink"
+          "label": "Have agreed meal and drink ready to serve; check serving temperature"
         },
         {
           "id": "crew-02-15",
           "owner": "Harry",
           "phase": "During stop",
-          "label": "Record arrival; offer food and exchange flasks"
+          "label": "Record actual arrival; offer agreed food; collect empty flasks and hand over filled ones"
         },
         {
           "id": "crew-02-16",
           "owner": "Lily",
           "phase": "During stop",
-          "label": "Assess warmth, feet, nausea and alertness"
+          "label": "Ask Ben about cold, foot pain, nausea and dizziness; check alertness and ability to respond normally"
         },
         {
           "id": "crew-02-17",
           "owner": "Lily",
           "phase": "During stop",
-          "label": "Assist with foot care and clothing changes as needed"
+          "label": "Ask where feet hurt; help dry feet, change socks and apply familiar blister protection if needed; offer dry layers"
         },
         {
           "id": "crew-02-18",
           "owner": "John",
           "phase": "During stop",
-          "label": "Maintain safe warm recovery setup and hot water"
+          "label": "Keep chair stable and blanket available; provide hot water safely outdoors where permitted"
         },
         {
           "id": "crew-02-19",
           "owner": "Lily",
           "phase": "Before Ben departs",
-          "label": "Check welfare and mandatory kit; escalate safety concerns"
+          "label": "Confirm Ben is warm enough, alert and able to continue safely; check any removed mandatory items are back in vest; seek medical help if concerned"
         },
         {
           "id": "crew-02-20",
@@ -549,7 +549,7 @@ window.RACE_DATA = {
           "id": "crew-02-22",
           "owner": "Lily",
           "phase": "Before crew departs",
-          "label": "Repack welfare kit and used clothing"
+          "label": "Return dressings, tape, scissors and towel to foot-care box; bag wet clothing separately"
         },
         {
           "id": "crew-02-23",
@@ -561,7 +561,7 @@ window.RACE_DATA = {
           "id": "crew-02-24",
           "owner": "Harry",
           "phase": "Before crew departs",
-          "label": "Confirm next destination and navigation"
+          "label": "Open next crew pin and confirm route before driver sets off"
         }
       ]
     },
@@ -643,7 +643,7 @@ window.RACE_DATA = {
           "id": "crew-03-1",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare welfare kit and any agreed clothing changes"
+          "label": "Keep blister dressings, tape, spare socks and warm layer within reach; unpack only if needed"
         },
         {
           "id": "crew-03-2",
@@ -655,43 +655,43 @@ window.RACE_DATA = {
           "id": "crew-03-3",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare Labelled food bag"
+          "label": "Retrieve numbered food bag and check contents against station allocation"
         },
         {
           "id": "crew-03-4",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare filled spare flasks"
+          "label": "Fill and label plain water and electrolyte flasks"
         },
         {
           "id": "crew-03-5",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare waste bag"
+          "label": "Open rubbish bag and place within reach"
         },
         {
           "id": "crew-03-6",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare phone/tracker"
+          "label": "Open tracker on phone and confirm latest position"
         },
         {
           "id": "crew-03-7",
           "owner": "Harry",
           "phase": "During stop",
-          "label": "Record arrival; offer food and exchange flasks"
+          "label": "Record actual arrival; offer agreed food; collect empty flasks and hand over filled ones"
         },
         {
           "id": "crew-03-8",
           "owner": "Lily",
           "phase": "During stop",
-          "label": "Assess warmth, feet, nausea and alertness"
+          "label": "Ask Ben about cold, foot pain, nausea and dizziness; check alertness and ability to respond normally"
         },
         {
           "id": "crew-03-9",
           "owner": "Lily",
           "phase": "Before Ben departs",
-          "label": "Check welfare and mandatory kit; escalate safety concerns"
+          "label": "Confirm Ben is warm enough, alert and able to continue safely; check any removed mandatory items are back in vest; seek medical help if concerned"
         },
         {
           "id": "crew-03-10",
@@ -709,7 +709,7 @@ window.RACE_DATA = {
           "id": "crew-03-12",
           "owner": "Lily",
           "phase": "Before crew departs",
-          "label": "Repack welfare kit and used clothing"
+          "label": "Return dressings, tape, scissors and towel to foot-care box; bag wet clothing separately"
         },
         {
           "id": "crew-03-13",
@@ -721,7 +721,7 @@ window.RACE_DATA = {
           "id": "crew-03-14",
           "owner": "Harry",
           "phase": "Before crew departs",
-          "label": "Confirm next destination and navigation"
+          "label": "Open next crew pin and confirm route before driver sets off"
         }
       ]
     },
@@ -769,7 +769,7 @@ window.RACE_DATA = {
           "id": "crew-04-1",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare welfare kit and any agreed clothing changes"
+          "label": "Have spare socks, dry layer, towel and blister supplies accessible"
         },
         {
           "id": "crew-04-2",
@@ -781,55 +781,55 @@ window.RACE_DATA = {
           "id": "crew-04-3",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare Labelled food bag"
+          "label": "Retrieve numbered food bag and check contents against station allocation"
         },
         {
           "id": "crew-04-4",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare filled spare flasks"
+          "label": "Fill and label plain water and electrolyte flasks"
         },
         {
           "id": "crew-04-5",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare waste bag"
+          "label": "Open rubbish bag and place within reach"
         },
         {
           "id": "crew-04-6",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare phone/tracker"
+          "label": "Open tracker on phone and confirm latest position"
         },
         {
           "id": "crew-04-7",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare spare head torches, batteries and dry layers"
+          "label": "Retrieve and set out spare head torches, batteries and dry layers"
         },
         {
           "id": "crew-04-8",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare water containers"
+          "label": "Retrieve and set out water containers"
         },
         {
           "id": "crew-04-9",
           "owner": "Harry",
           "phase": "During stop",
-          "label": "Record arrival; offer food and exchange flasks"
+          "label": "Record actual arrival; offer agreed food; collect empty flasks and hand over filled ones"
         },
         {
           "id": "crew-04-10",
           "owner": "Lily",
           "phase": "During stop",
-          "label": "Assess warmth, feet, nausea and alertness"
+          "label": "Ask Ben about cold, foot pain, nausea and dizziness; check alertness and ability to respond normally"
         },
         {
           "id": "crew-04-11",
           "owner": "Lily",
           "phase": "Before Ben departs",
-          "label": "Check welfare and mandatory kit; escalate safety concerns"
+          "label": "Confirm Ben is warm enough, alert and able to continue safely; check any removed mandatory items are back in vest; seek medical help if concerned"
         },
         {
           "id": "crew-04-12",
@@ -847,7 +847,7 @@ window.RACE_DATA = {
           "id": "crew-04-14",
           "owner": "Lily",
           "phase": "Before crew departs",
-          "label": "Repack welfare kit and used clothing"
+          "label": "Return dressings, tape, scissors and towel to foot-care box; bag wet clothing separately"
         },
         {
           "id": "crew-04-15",
@@ -859,7 +859,7 @@ window.RACE_DATA = {
           "id": "crew-04-16",
           "owner": "Harry",
           "phase": "Before crew departs",
-          "label": "Confirm next destination and navigation"
+          "label": "Open next crew pin and confirm route before driver sets off"
         }
       ]
     },
@@ -941,7 +941,7 @@ window.RACE_DATA = {
           "id": "crew-05-1",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare welfare kit and any agreed clothing changes"
+          "label": "Keep blister dressings, tape, spare socks and warm layer within reach; unpack only if needed"
         },
         {
           "id": "crew-05-2",
@@ -953,61 +953,61 @@ window.RACE_DATA = {
           "id": "crew-05-3",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare Labelled food bag"
+          "label": "Retrieve numbered food bag and check contents against station allocation"
         },
         {
           "id": "crew-05-4",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare filled spare flasks"
+          "label": "Fill and label plain water and electrolyte flasks"
         },
         {
           "id": "crew-05-5",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare waste bag"
+          "label": "Open rubbish bag and place within reach"
         },
         {
           "id": "crew-05-6",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare phone/tracker"
+          "label": "Open tracker on phone and confirm latest position"
         },
         {
           "id": "crew-05-7",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare hot food flask if requested"
+          "label": "Retrieve and set out hot food flask if requested"
         },
         {
           "id": "crew-05-8",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare Crew head torches or lantern"
+          "label": "Retrieve and set out Crew head torches or lantern"
         },
         {
           "id": "crew-05-9",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare reflective clothing"
+          "label": "Retrieve and set out reflective clothing"
         },
         {
           "id": "crew-05-10",
           "owner": "Harry",
           "phase": "During stop",
-          "label": "Record arrival; offer food and exchange flasks"
+          "label": "Record actual arrival; offer agreed food; collect empty flasks and hand over filled ones"
         },
         {
           "id": "crew-05-11",
           "owner": "Lily",
           "phase": "During stop",
-          "label": "Assess warmth, feet, nausea and alertness"
+          "label": "Ask Ben about cold, foot pain, nausea and dizziness; check alertness and ability to respond normally"
         },
         {
           "id": "crew-05-12",
           "owner": "Lily",
           "phase": "Before Ben departs",
-          "label": "Check welfare and mandatory kit; escalate safety concerns"
+          "label": "Confirm Ben is warm enough, alert and able to continue safely; check any removed mandatory items are back in vest; seek medical help if concerned"
         },
         {
           "id": "crew-05-13",
@@ -1025,7 +1025,7 @@ window.RACE_DATA = {
           "id": "crew-05-15",
           "owner": "Lily",
           "phase": "Before crew departs",
-          "label": "Repack welfare kit and used clothing"
+          "label": "Return dressings, tape, scissors and towel to foot-care box; bag wet clothing separately"
         },
         {
           "id": "crew-05-16",
@@ -1037,7 +1037,7 @@ window.RACE_DATA = {
           "id": "crew-05-17",
           "owner": "Harry",
           "phase": "Before crew departs",
-          "label": "Confirm next destination and navigation"
+          "label": "Open next crew pin and confirm route before driver sets off"
         }
       ]
     },
@@ -1085,7 +1085,7 @@ window.RACE_DATA = {
           "id": "crew-06-1",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare welfare kit and any agreed clothing changes"
+          "label": "Keep blister dressings, tape, spare socks and warm layer within reach; unpack only if needed"
         },
         {
           "id": "crew-06-2",
@@ -1097,67 +1097,67 @@ window.RACE_DATA = {
           "id": "crew-06-3",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare Labelled food bag"
+          "label": "Retrieve numbered food bag and check contents against station allocation"
         },
         {
           "id": "crew-06-4",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare filled spare flasks"
+          "label": "Fill and label plain water and electrolyte flasks"
         },
         {
           "id": "crew-06-5",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare waste bag"
+          "label": "Open rubbish bag and place within reach"
         },
         {
           "id": "crew-06-6",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare phone/tracker"
+          "label": "Open tracker on phone and confirm latest position"
         },
         {
           "id": "crew-06-7",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare hot drink flask"
+          "label": "Retrieve and set out hot drink flask"
         },
         {
           "id": "crew-06-8",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare dry layer"
+          "label": "Retrieve and set out dry layer"
         },
         {
           "id": "crew-06-9",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare Crew head torches or lantern"
+          "label": "Retrieve and set out Crew head torches or lantern"
         },
         {
           "id": "crew-06-10",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare reflective clothing"
+          "label": "Retrieve and set out reflective clothing"
         },
         {
           "id": "crew-06-11",
           "owner": "Harry",
           "phase": "During stop",
-          "label": "Record arrival; offer food and exchange flasks"
+          "label": "Record actual arrival; offer agreed food; collect empty flasks and hand over filled ones"
         },
         {
           "id": "crew-06-12",
           "owner": "Lily",
           "phase": "During stop",
-          "label": "Assess warmth, feet, nausea and alertness"
+          "label": "Ask Ben about cold, foot pain, nausea and dizziness; check alertness and ability to respond normally"
         },
         {
           "id": "crew-06-13",
           "owner": "Lily",
           "phase": "Before Ben departs",
-          "label": "Check welfare and mandatory kit; escalate safety concerns"
+          "label": "Confirm Ben is warm enough, alert and able to continue safely; check any removed mandatory items are back in vest; seek medical help if concerned"
         },
         {
           "id": "crew-06-14",
@@ -1175,7 +1175,7 @@ window.RACE_DATA = {
           "id": "crew-06-16",
           "owner": "Lily",
           "phase": "Before crew departs",
-          "label": "Repack welfare kit and used clothing"
+          "label": "Return dressings, tape, scissors and towel to foot-care box; bag wet clothing separately"
         },
         {
           "id": "crew-06-17",
@@ -1187,7 +1187,7 @@ window.RACE_DATA = {
           "id": "crew-06-18",
           "owner": "Harry",
           "phase": "Before crew departs",
-          "label": "Confirm next destination and navigation"
+          "label": "Open next crew pin and confirm route before driver sets off"
         }
       ]
     },
@@ -1269,7 +1269,7 @@ window.RACE_DATA = {
           "id": "crew-07-1",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare welfare kit and any agreed clothing changes"
+          "label": "Lay out dry socks, towel, blister dressings, tape, scissors, wipes and agreed dry layers"
         },
         {
           "id": "crew-07-2",
@@ -1281,127 +1281,127 @@ window.RACE_DATA = {
           "id": "crew-07-3",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare Labelled food bag"
+          "label": "Retrieve numbered food bag and check contents against station allocation"
         },
         {
           "id": "crew-07-4",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare filled spare flasks"
+          "label": "Fill and label plain water and electrolyte flasks"
         },
         {
           "id": "crew-07-5",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare waste bag"
+          "label": "Open rubbish bag and place within reach"
         },
         {
           "id": "crew-07-6",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare phone/tracker"
+          "label": "Open tracker on phone and confirm latest position"
         },
         {
           "id": "crew-07-7",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare Reclining chair"
+          "label": "Retrieve and set out Reclining chair"
         },
         {
           "id": "crew-07-8",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare folding table"
+          "label": "Retrieve and set out folding table"
         },
         {
           "id": "crew-07-9",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare blanket or sleeping bag"
+          "label": "Retrieve and set out blanket or sleeping bag"
         },
         {
           "id": "crew-07-10",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare waterproof mat"
+          "label": "Retrieve and set out waterproof mat"
         },
         {
           "id": "crew-07-11",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare foot-care kit"
+          "label": "Open foot-care box; set out clean towel, dressings, tape and scissors"
         },
         {
           "id": "crew-07-12",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare dry socks and layers"
+          "label": "Lay out dry socks and agreed spare base layer"
         },
         {
           "id": "crew-07-13",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare insulated mug and utensils"
+          "label": "Retrieve and set out insulated mug and utensils"
         },
         {
           "id": "crew-07-14",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare prepared food and hot drink"
+          "label": "Have agreed meal and drink ready to serve; check serving temperature"
         },
         {
           "id": "crew-07-15",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare lighting and charging box"
+          "label": "Retrieve charged spare lamps, batteries, power bank and matching cables"
         },
         {
           "id": "crew-07-16",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare overnight food reserve"
+          "label": "Retrieve and set out overnight food reserve"
         },
         {
           "id": "crew-07-17",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare Crew head torches or lantern"
+          "label": "Retrieve and set out Crew head torches or lantern"
         },
         {
           "id": "crew-07-18",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare reflective clothing"
+          "label": "Retrieve and set out reflective clothing"
         },
         {
           "id": "crew-07-19",
           "owner": "Harry",
           "phase": "During stop",
-          "label": "Record arrival; offer food and exchange flasks"
+          "label": "Record actual arrival; offer agreed food; collect empty flasks and hand over filled ones"
         },
         {
           "id": "crew-07-20",
           "owner": "Lily",
           "phase": "During stop",
-          "label": "Assess warmth, feet, nausea and alertness"
+          "label": "Ask Ben about cold, foot pain, nausea and dizziness; check alertness and ability to respond normally"
         },
         {
           "id": "crew-07-21",
           "owner": "Lily",
           "phase": "During stop",
-          "label": "Assist with foot care and clothing changes as needed"
+          "label": "Ask where feet hurt; help dry feet, change socks and apply familiar blister protection if needed; offer dry layers"
         },
         {
           "id": "crew-07-22",
           "owner": "John",
           "phase": "During stop",
-          "label": "Maintain safe warm recovery setup and hot water"
+          "label": "Keep chair stable and blanket available; provide hot water safely outdoors where permitted"
         },
         {
           "id": "crew-07-23",
           "owner": "Lily",
           "phase": "Before Ben departs",
-          "label": "Check welfare and mandatory kit; escalate safety concerns"
+          "label": "Confirm Ben is warm enough, alert and able to continue safely; check any removed mandatory items are back in vest; seek medical help if concerned"
         },
         {
           "id": "crew-07-24",
@@ -1419,7 +1419,7 @@ window.RACE_DATA = {
           "id": "crew-07-26",
           "owner": "Lily",
           "phase": "Before crew departs",
-          "label": "Repack welfare kit and used clothing"
+          "label": "Return dressings, tape, scissors and towel to foot-care box; bag wet clothing separately"
         },
         {
           "id": "crew-07-27",
@@ -1431,7 +1431,7 @@ window.RACE_DATA = {
           "id": "crew-07-28",
           "owner": "Harry",
           "phase": "Before crew departs",
-          "label": "Confirm next destination and navigation"
+          "label": "Open next crew pin and confirm route before driver sets off"
         }
       ]
     },
@@ -1547,7 +1547,7 @@ window.RACE_DATA = {
           "id": "crew-08-1",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare welfare kit and any agreed clothing changes"
+          "label": "Lay out dry socks, towel, blister dressings, tape, scissors, wipes and agreed dry layers"
         },
         {
           "id": "crew-08-2",
@@ -1559,133 +1559,133 @@ window.RACE_DATA = {
           "id": "crew-08-3",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare Labelled food bag"
+          "label": "Retrieve numbered food bag and check contents against station allocation"
         },
         {
           "id": "crew-08-4",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare filled spare flasks"
+          "label": "Fill and label plain water and electrolyte flasks"
         },
         {
           "id": "crew-08-5",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare waste bag"
+          "label": "Open rubbish bag and place within reach"
         },
         {
           "id": "crew-08-6",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare phone/tracker"
+          "label": "Open tracker on phone and confirm latest position"
         },
         {
           "id": "crew-08-7",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare Reclining chair"
+          "label": "Retrieve and set out Reclining chair"
         },
         {
           "id": "crew-08-8",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare folding table"
+          "label": "Retrieve and set out folding table"
         },
         {
           "id": "crew-08-9",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare blanket or sleeping bag"
+          "label": "Retrieve and set out blanket or sleeping bag"
         },
         {
           "id": "crew-08-10",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare waterproof mat"
+          "label": "Retrieve and set out waterproof mat"
         },
         {
           "id": "crew-08-11",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare foot-care kit"
+          "label": "Open foot-care box; set out clean towel, dressings, tape and scissors"
         },
         {
           "id": "crew-08-12",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare dry socks and layers"
+          "label": "Lay out dry socks and agreed spare base layer"
         },
         {
           "id": "crew-08-13",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare insulated mug and utensils"
+          "label": "Retrieve and set out insulated mug and utensils"
         },
         {
           "id": "crew-08-14",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare prepared food and hot drink"
+          "label": "Have agreed meal and drink ready to serve; check serving temperature"
         },
         {
           "id": "crew-08-15",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare timer"
+          "label": "Retrieve and set out timer"
         },
         {
           "id": "crew-08-16",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare permitted sheltered rest space"
+          "label": "Retrieve and set out permitted sheltered rest space"
         },
         {
           "id": "crew-08-17",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare Crew head torches or lantern"
+          "label": "Retrieve and set out Crew head torches or lantern"
         },
         {
           "id": "crew-08-18",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare reflective clothing"
+          "label": "Retrieve and set out reflective clothing"
         },
         {
           "id": "crew-08-19",
           "owner": "Harry",
           "phase": "During stop",
-          "label": "Record arrival; offer food and exchange flasks"
+          "label": "Record actual arrival; offer agreed food; collect empty flasks and hand over filled ones"
         },
         {
           "id": "crew-08-20",
           "owner": "Lily",
           "phase": "During stop",
-          "label": "Assess warmth, feet, nausea and alertness"
+          "label": "Ask Ben about cold, foot pain, nausea and dizziness; check alertness and ability to respond normally"
         },
         {
           "id": "crew-08-21",
           "owner": "Lily",
           "phase": "During stop",
-          "label": "Assist with foot care and clothing changes as needed"
+          "label": "Ask where feet hurt; help dry feet, change socks and apply familiar blister protection if needed; offer dry layers"
         },
         {
           "id": "crew-08-22",
           "owner": "John",
           "phase": "During stop",
-          "label": "Maintain safe warm recovery setup and hot water"
+          "label": "Keep chair stable and blanket available; provide hot water safely outdoors where permitted"
         },
         {
           "id": "crew-08-23",
           "owner": "Lily",
           "phase": "During stop",
-          "label": "Assess and supervise optional nap if needed; coordinate with Harry"
+          "label": "Ask about sleepiness; if safe and needed, agree nap with Harry, set 10–20 minute timer and supervise in warm permitted shelter"
         },
         {
           "id": "crew-08-24",
           "owner": "Lily",
           "phase": "Before Ben departs",
-          "label": "Check welfare and mandatory kit; escalate safety concerns"
+          "label": "Confirm Ben is warm enough, alert and able to continue safely; check any removed mandatory items are back in vest; seek medical help if concerned"
         },
         {
           "id": "crew-08-25",
@@ -1703,7 +1703,7 @@ window.RACE_DATA = {
           "id": "crew-08-27",
           "owner": "Lily",
           "phase": "Before crew departs",
-          "label": "Repack welfare kit and used clothing"
+          "label": "Return dressings, tape, scissors and towel to foot-care box; bag wet clothing separately"
         },
         {
           "id": "crew-08-28",
@@ -1715,7 +1715,7 @@ window.RACE_DATA = {
           "id": "crew-08-29",
           "owner": "Harry",
           "phase": "Before crew departs",
-          "label": "Confirm next destination and navigation"
+          "label": "Open next crew pin and confirm route before driver sets off"
         }
       ]
     },
@@ -1797,7 +1797,7 @@ window.RACE_DATA = {
           "id": "crew-09-1",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare welfare kit and any agreed clothing changes"
+          "label": "Keep blister dressings, tape, spare socks and warm layer within reach; unpack only if needed"
         },
         {
           "id": "crew-09-2",
@@ -1809,67 +1809,67 @@ window.RACE_DATA = {
           "id": "crew-09-3",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare Labelled food bag"
+          "label": "Retrieve numbered food bag and check contents against station allocation"
         },
         {
           "id": "crew-09-4",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare filled spare flasks"
+          "label": "Fill and label plain water and electrolyte flasks"
         },
         {
           "id": "crew-09-5",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare waste bag"
+          "label": "Open rubbish bag and place within reach"
         },
         {
           "id": "crew-09-6",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare phone/tracker"
+          "label": "Open tracker on phone and confirm latest position"
         },
         {
           "id": "crew-09-7",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare Crew head torches or lantern"
+          "label": "Retrieve and set out Crew head torches or lantern"
         },
         {
           "id": "crew-09-8",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare reflective clothing"
+          "label": "Retrieve and set out reflective clothing"
         },
         {
           "id": "crew-09-9",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare reclining chair, blanket and timer only if nap needed"
+          "label": "Retrieve and set out reclining chair, blanket and timer only if nap needed"
         },
         {
           "id": "crew-09-10",
           "owner": "Harry",
           "phase": "During stop",
-          "label": "Record arrival; offer food and exchange flasks"
+          "label": "Record actual arrival; offer agreed food; collect empty flasks and hand over filled ones"
         },
         {
           "id": "crew-09-11",
           "owner": "Lily",
           "phase": "During stop",
-          "label": "Assess warmth, feet, nausea and alertness"
+          "label": "Ask Ben about cold, foot pain, nausea and dizziness; check alertness and ability to respond normally"
         },
         {
           "id": "crew-09-12",
           "owner": "Lily",
           "phase": "During stop",
-          "label": "Assess and supervise optional nap if needed; coordinate with Harry"
+          "label": "Ask about sleepiness; if safe and needed, agree nap with Harry, set 10–20 minute timer and supervise in warm permitted shelter"
         },
         {
           "id": "crew-09-13",
           "owner": "Lily",
           "phase": "Before Ben departs",
-          "label": "Check welfare and mandatory kit; escalate safety concerns"
+          "label": "Confirm Ben is warm enough, alert and able to continue safely; check any removed mandatory items are back in vest; seek medical help if concerned"
         },
         {
           "id": "crew-09-14",
@@ -1887,7 +1887,7 @@ window.RACE_DATA = {
           "id": "crew-09-16",
           "owner": "Lily",
           "phase": "Before crew departs",
-          "label": "Repack welfare kit and used clothing"
+          "label": "Return dressings, tape, scissors and towel to foot-care box; bag wet clothing separately"
         },
         {
           "id": "crew-09-17",
@@ -1899,7 +1899,7 @@ window.RACE_DATA = {
           "id": "crew-09-18",
           "owner": "Harry",
           "phase": "Before crew departs",
-          "label": "Confirm next destination and navigation"
+          "label": "Open next crew pin and confirm route before driver sets off"
         }
       ]
     },
@@ -1947,7 +1947,7 @@ window.RACE_DATA = {
           "id": "crew-10-1",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare welfare kit and any agreed clothing changes"
+          "label": "Keep blister dressings, tape, spare socks and warm layer within reach; unpack only if needed"
         },
         {
           "id": "crew-10-2",
@@ -1959,55 +1959,55 @@ window.RACE_DATA = {
           "id": "crew-10-3",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare Labelled food bag"
+          "label": "Retrieve numbered food bag and check contents against station allocation"
         },
         {
           "id": "crew-10-4",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare filled spare flasks"
+          "label": "Fill and label plain water and electrolyte flasks"
         },
         {
           "id": "crew-10-5",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare waste bag"
+          "label": "Open rubbish bag and place within reach"
         },
         {
           "id": "crew-10-6",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare phone/tracker"
+          "label": "Open tracker on phone and confirm latest position"
         },
         {
           "id": "crew-10-7",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare Crew head torches or lantern"
+          "label": "Retrieve and set out Crew head torches or lantern"
         },
         {
           "id": "crew-10-8",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare reflective clothing"
+          "label": "Retrieve and set out reflective clothing"
         },
         {
           "id": "crew-10-9",
           "owner": "Harry",
           "phase": "During stop",
-          "label": "Record arrival; offer food and exchange flasks"
+          "label": "Record actual arrival; offer agreed food; collect empty flasks and hand over filled ones"
         },
         {
           "id": "crew-10-10",
           "owner": "Lily",
           "phase": "During stop",
-          "label": "Assess warmth, feet, nausea and alertness"
+          "label": "Ask Ben about cold, foot pain, nausea and dizziness; check alertness and ability to respond normally"
         },
         {
           "id": "crew-10-11",
           "owner": "Lily",
           "phase": "Before Ben departs",
-          "label": "Check welfare and mandatory kit; escalate safety concerns"
+          "label": "Confirm Ben is warm enough, alert and able to continue safely; check any removed mandatory items are back in vest; seek medical help if concerned"
         },
         {
           "id": "crew-10-12",
@@ -2025,7 +2025,7 @@ window.RACE_DATA = {
           "id": "crew-10-14",
           "owner": "Lily",
           "phase": "Before crew departs",
-          "label": "Repack welfare kit and used clothing"
+          "label": "Return dressings, tape, scissors and towel to foot-care box; bag wet clothing separately"
         },
         {
           "id": "crew-10-15",
@@ -2037,7 +2037,7 @@ window.RACE_DATA = {
           "id": "crew-10-16",
           "owner": "Harry",
           "phase": "Before crew departs",
-          "label": "Confirm next destination and navigation"
+          "label": "Open next crew pin and confirm route before driver sets off"
         }
       ]
     },
@@ -2119,7 +2119,7 @@ window.RACE_DATA = {
           "id": "crew-11-1",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare welfare kit and any agreed clothing changes"
+          "label": "Lay out dry socks, towel, blister dressings, tape, scissors, wipes and agreed dry layers"
         },
         {
           "id": "crew-11-2",
@@ -2131,115 +2131,115 @@ window.RACE_DATA = {
           "id": "crew-11-3",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare Labelled food bag"
+          "label": "Retrieve numbered food bag and check contents against station allocation"
         },
         {
           "id": "crew-11-4",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare filled spare flasks"
+          "label": "Fill and label plain water and electrolyte flasks"
         },
         {
           "id": "crew-11-5",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare waste bag"
+          "label": "Open rubbish bag and place within reach"
         },
         {
           "id": "crew-11-6",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare phone/tracker"
+          "label": "Open tracker on phone and confirm latest position"
         },
         {
           "id": "crew-11-7",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare Reclining chair"
+          "label": "Retrieve and set out Reclining chair"
         },
         {
           "id": "crew-11-8",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare folding table"
+          "label": "Retrieve and set out folding table"
         },
         {
           "id": "crew-11-9",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare blanket or sleeping bag"
+          "label": "Retrieve and set out blanket or sleeping bag"
         },
         {
           "id": "crew-11-10",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare waterproof mat"
+          "label": "Retrieve and set out waterproof mat"
         },
         {
           "id": "crew-11-11",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare foot-care kit"
+          "label": "Open foot-care box; set out clean towel, dressings, tape and scissors"
         },
         {
           "id": "crew-11-12",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare dry socks and layers"
+          "label": "Lay out dry socks and agreed spare base layer"
         },
         {
           "id": "crew-11-13",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare insulated mug and utensils"
+          "label": "Retrieve and set out insulated mug and utensils"
         },
         {
           "id": "crew-11-14",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare prepared food and hot drink"
+          "label": "Have agreed meal and drink ready to serve; check serving temperature"
         },
         {
           "id": "crew-11-15",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare breakfast and hot drink"
+          "label": "Retrieve and set out breakfast and hot drink"
         },
         {
           "id": "crew-11-16",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare spare power"
+          "label": "Retrieve and set out spare power"
         },
         {
           "id": "crew-11-17",
           "owner": "Harry",
           "phase": "During stop",
-          "label": "Record arrival; offer food and exchange flasks"
+          "label": "Record actual arrival; offer agreed food; collect empty flasks and hand over filled ones"
         },
         {
           "id": "crew-11-18",
           "owner": "Lily",
           "phase": "During stop",
-          "label": "Assess warmth, feet, nausea and alertness"
+          "label": "Ask Ben about cold, foot pain, nausea and dizziness; check alertness and ability to respond normally"
         },
         {
           "id": "crew-11-19",
           "owner": "Lily",
           "phase": "During stop",
-          "label": "Assist with foot care and clothing changes as needed"
+          "label": "Ask where feet hurt; help dry feet, change socks and apply familiar blister protection if needed; offer dry layers"
         },
         {
           "id": "crew-11-20",
           "owner": "John",
           "phase": "During stop",
-          "label": "Maintain safe warm recovery setup and hot water"
+          "label": "Keep chair stable and blanket available; provide hot water safely outdoors where permitted"
         },
         {
           "id": "crew-11-21",
           "owner": "Lily",
           "phase": "Before Ben departs",
-          "label": "Check welfare and mandatory kit; escalate safety concerns"
+          "label": "Confirm Ben is warm enough, alert and able to continue safely; check any removed mandatory items are back in vest; seek medical help if concerned"
         },
         {
           "id": "crew-11-22",
@@ -2257,7 +2257,7 @@ window.RACE_DATA = {
           "id": "crew-11-24",
           "owner": "Lily",
           "phase": "Before crew departs",
-          "label": "Repack welfare kit and used clothing"
+          "label": "Return dressings, tape, scissors and towel to foot-care box; bag wet clothing separately"
         },
         {
           "id": "crew-11-25",
@@ -2269,7 +2269,7 @@ window.RACE_DATA = {
           "id": "crew-11-26",
           "owner": "Harry",
           "phase": "Before crew departs",
-          "label": "Confirm next destination and navigation"
+          "label": "Open next crew pin and confirm route before driver sets off"
         }
       ]
     },
@@ -2317,7 +2317,7 @@ window.RACE_DATA = {
           "id": "crew-12-1",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare welfare kit and any agreed clothing changes"
+          "label": "Keep blister dressings, tape, spare socks and warm layer within reach; unpack only if needed"
         },
         {
           "id": "crew-12-2",
@@ -2329,49 +2329,49 @@ window.RACE_DATA = {
           "id": "crew-12-3",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare Labelled food bag"
+          "label": "Retrieve numbered food bag and check contents against station allocation"
         },
         {
           "id": "crew-12-4",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare filled spare flasks"
+          "label": "Fill and label plain water and electrolyte flasks"
         },
         {
           "id": "crew-12-5",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare waste bag"
+          "label": "Open rubbish bag and place within reach"
         },
         {
           "id": "crew-12-6",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare phone/tracker"
+          "label": "Open tracker on phone and confirm latest position"
         },
         {
           "id": "crew-12-7",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare hot drink flask if requested"
+          "label": "Retrieve and set out hot drink flask if requested"
         },
         {
           "id": "crew-12-8",
           "owner": "Harry",
           "phase": "During stop",
-          "label": "Record arrival; offer food and exchange flasks"
+          "label": "Record actual arrival; offer agreed food; collect empty flasks and hand over filled ones"
         },
         {
           "id": "crew-12-9",
           "owner": "Lily",
           "phase": "During stop",
-          "label": "Assess warmth, feet, nausea and alertness"
+          "label": "Ask Ben about cold, foot pain, nausea and dizziness; check alertness and ability to respond normally"
         },
         {
           "id": "crew-12-10",
           "owner": "Lily",
           "phase": "Before Ben departs",
-          "label": "Check welfare and mandatory kit; escalate safety concerns"
+          "label": "Confirm Ben is warm enough, alert and able to continue safely; check any removed mandatory items are back in vest; seek medical help if concerned"
         },
         {
           "id": "crew-12-11",
@@ -2389,7 +2389,7 @@ window.RACE_DATA = {
           "id": "crew-12-13",
           "owner": "Lily",
           "phase": "Before crew departs",
-          "label": "Repack welfare kit and used clothing"
+          "label": "Return dressings, tape, scissors and towel to foot-care box; bag wet clothing separately"
         },
         {
           "id": "crew-12-14",
@@ -2401,7 +2401,7 @@ window.RACE_DATA = {
           "id": "crew-12-15",
           "owner": "Harry",
           "phase": "Before crew departs",
-          "label": "Confirm next destination and navigation"
+          "label": "Open next crew pin and confirm route before driver sets off"
         }
       ]
     },
@@ -2483,7 +2483,7 @@ window.RACE_DATA = {
           "id": "crew-13-1",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare welfare kit and any agreed clothing changes"
+          "label": "Keep blister dressings, tape, spare socks and warm layer within reach; unpack only if needed"
         },
         {
           "id": "crew-13-2",
@@ -2495,43 +2495,43 @@ window.RACE_DATA = {
           "id": "crew-13-3",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare Labelled food bag"
+          "label": "Retrieve numbered food bag and check contents against station allocation"
         },
         {
           "id": "crew-13-4",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare filled spare flasks"
+          "label": "Fill and label plain water and electrolyte flasks"
         },
         {
           "id": "crew-13-5",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare waste bag"
+          "label": "Open rubbish bag and place within reach"
         },
         {
           "id": "crew-13-6",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare phone/tracker"
+          "label": "Open tracker on phone and confirm latest position"
         },
         {
           "id": "crew-13-7",
           "owner": "Harry",
           "phase": "During stop",
-          "label": "Record arrival; offer food and exchange flasks"
+          "label": "Record actual arrival; offer agreed food; collect empty flasks and hand over filled ones"
         },
         {
           "id": "crew-13-8",
           "owner": "Lily",
           "phase": "During stop",
-          "label": "Assess warmth, feet, nausea and alertness"
+          "label": "Ask Ben about cold, foot pain, nausea and dizziness; check alertness and ability to respond normally"
         },
         {
           "id": "crew-13-9",
           "owner": "Lily",
           "phase": "Before Ben departs",
-          "label": "Check welfare and mandatory kit; escalate safety concerns"
+          "label": "Confirm Ben is warm enough, alert and able to continue safely; check any removed mandatory items are back in vest; seek medical help if concerned"
         },
         {
           "id": "crew-13-10",
@@ -2549,7 +2549,7 @@ window.RACE_DATA = {
           "id": "crew-13-12",
           "owner": "Lily",
           "phase": "Before crew departs",
-          "label": "Repack welfare kit and used clothing"
+          "label": "Return dressings, tape, scissors and towel to foot-care box; bag wet clothing separately"
         },
         {
           "id": "crew-13-13",
@@ -2561,7 +2561,7 @@ window.RACE_DATA = {
           "id": "crew-13-14",
           "owner": "Harry",
           "phase": "Before crew departs",
-          "label": "Confirm next destination and navigation"
+          "label": "Open next crew pin and confirm route before driver sets off"
         }
       ]
     },
@@ -2643,7 +2643,7 @@ window.RACE_DATA = {
           "id": "crew-14-1",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare welfare kit and any agreed clothing changes"
+          "label": "Have spare socks, dry layer, towel and blister supplies accessible"
         },
         {
           "id": "crew-14-2",
@@ -2655,67 +2655,67 @@ window.RACE_DATA = {
           "id": "crew-14-3",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare Labelled food bag"
+          "label": "Retrieve numbered food bag and check contents against station allocation"
         },
         {
           "id": "crew-14-4",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare filled spare flasks"
+          "label": "Fill and label plain water and electrolyte flasks"
         },
         {
           "id": "crew-14-5",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare waste bag"
+          "label": "Open rubbish bag and place within reach"
         },
         {
           "id": "crew-14-6",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare phone/tracker"
+          "label": "Open tracker on phone and confirm latest position"
         },
         {
           "id": "crew-14-7",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare folding chair"
+          "label": "Retrieve and set out folding chair"
         },
         {
           "id": "crew-14-8",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare warm layer"
+          "label": "Retrieve and set out warm layer"
         },
         {
           "id": "crew-14-9",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare lunch or snack"
+          "label": "Retrieve and set out lunch or snack"
         },
         {
           "id": "crew-14-10",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare foot-care kit"
+          "label": "Open foot-care box; set out clean towel, dressings, tape and scissors"
         },
         {
           "id": "crew-14-11",
           "owner": "Harry",
           "phase": "During stop",
-          "label": "Record arrival; offer food and exchange flasks"
+          "label": "Record actual arrival; offer agreed food; collect empty flasks and hand over filled ones"
         },
         {
           "id": "crew-14-12",
           "owner": "Lily",
           "phase": "During stop",
-          "label": "Assess warmth, feet, nausea and alertness"
+          "label": "Ask Ben about cold, foot pain, nausea and dizziness; check alertness and ability to respond normally"
         },
         {
           "id": "crew-14-13",
           "owner": "Lily",
           "phase": "Before Ben departs",
-          "label": "Check welfare and mandatory kit; escalate safety concerns"
+          "label": "Confirm Ben is warm enough, alert and able to continue safely; check any removed mandatory items are back in vest; seek medical help if concerned"
         },
         {
           "id": "crew-14-14",
@@ -2733,7 +2733,7 @@ window.RACE_DATA = {
           "id": "crew-14-16",
           "owner": "Lily",
           "phase": "Before crew departs",
-          "label": "Repack welfare kit and used clothing"
+          "label": "Return dressings, tape, scissors and towel to foot-care box; bag wet clothing separately"
         },
         {
           "id": "crew-14-17",
@@ -2745,7 +2745,7 @@ window.RACE_DATA = {
           "id": "crew-14-18",
           "owner": "Harry",
           "phase": "Before crew departs",
-          "label": "Confirm next destination and navigation"
+          "label": "Open next crew pin and confirm route before driver sets off"
         }
       ]
     },
@@ -2827,7 +2827,7 @@ window.RACE_DATA = {
           "id": "crew-15-1",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare welfare kit and any agreed clothing changes"
+          "label": "Keep blister dressings, tape, spare socks and warm layer within reach; unpack only if needed"
         },
         {
           "id": "crew-15-2",
@@ -2839,43 +2839,43 @@ window.RACE_DATA = {
           "id": "crew-15-3",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare Labelled food bag"
+          "label": "Retrieve numbered food bag and check contents against station allocation"
         },
         {
           "id": "crew-15-4",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare filled spare flasks"
+          "label": "Fill and label plain water and electrolyte flasks"
         },
         {
           "id": "crew-15-5",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare waste bag"
+          "label": "Open rubbish bag and place within reach"
         },
         {
           "id": "crew-15-6",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare phone/tracker"
+          "label": "Open tracker on phone and confirm latest position"
         },
         {
           "id": "crew-15-7",
           "owner": "Harry",
           "phase": "During stop",
-          "label": "Record arrival; offer food and exchange flasks"
+          "label": "Record actual arrival; offer agreed food; collect empty flasks and hand over filled ones"
         },
         {
           "id": "crew-15-8",
           "owner": "Lily",
           "phase": "During stop",
-          "label": "Assess warmth, feet, nausea and alertness"
+          "label": "Ask Ben about cold, foot pain, nausea and dizziness; check alertness and ability to respond normally"
         },
         {
           "id": "crew-15-9",
           "owner": "Lily",
           "phase": "Before Ben departs",
-          "label": "Check welfare and mandatory kit; escalate safety concerns"
+          "label": "Confirm Ben is warm enough, alert and able to continue safely; check any removed mandatory items are back in vest; seek medical help if concerned"
         },
         {
           "id": "crew-15-10",
@@ -2893,7 +2893,7 @@ window.RACE_DATA = {
           "id": "crew-15-12",
           "owner": "Lily",
           "phase": "Before crew departs",
-          "label": "Repack welfare kit and used clothing"
+          "label": "Return dressings, tape, scissors and towel to foot-care box; bag wet clothing separately"
         },
         {
           "id": "crew-15-13",
@@ -2905,7 +2905,7 @@ window.RACE_DATA = {
           "id": "crew-15-14",
           "owner": "Harry",
           "phase": "Before crew departs",
-          "label": "Confirm next destination and navigation"
+          "label": "Open next crew pin and confirm route before driver sets off"
         }
       ]
     },
@@ -2953,7 +2953,7 @@ window.RACE_DATA = {
           "id": "finish-1",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare welfare kit and any agreed clothing changes"
+          "label": "Lay out dry clothes, footwear and towel; keep first-aid kit accessible"
         },
         {
           "id": "finish-2",
@@ -2965,31 +2965,31 @@ window.RACE_DATA = {
           "id": "finish-3",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare Finish bag"
+          "label": "Retrieve and set out Finish bag"
         },
         {
           "id": "finish-4",
           "owner": "Lily",
           "phase": "Before arrival",
-          "label": "Prepare dry warm clothes and shoes"
+          "label": "Retrieve and set out dry warm clothes and shoes"
         },
         {
           "id": "finish-5",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare blanket"
+          "label": "Retrieve and set out blanket"
         },
         {
           "id": "finish-6",
           "owner": "Harry",
           "phase": "Before arrival",
-          "label": "Prepare recovery food and drink"
+          "label": "Retrieve and set out recovery food and drink"
         },
         {
           "id": "finish-7",
           "owner": "John",
           "phase": "Before arrival",
-          "label": "Prepare chair if permitted"
+          "label": "Retrieve and set out chair if permitted"
         },
         {
           "id": "finish-8",
@@ -3007,7 +3007,7 @@ window.RACE_DATA = {
           "id": "finish-10",
           "owner": "Lily",
           "phase": "Before crew departs",
-          "label": "Repack welfare kit and used clothing"
+          "label": "Return dressings, tape, scissors and towel to foot-care box; bag wet clothing separately"
         },
         {
           "id": "finish-11",
@@ -3019,7 +3019,7 @@ window.RACE_DATA = {
           "id": "finish-12",
           "owner": "Harry",
           "phase": "Before crew departs",
-          "label": "Confirm next destination and navigation"
+          "label": "Open next crew pin and confirm route before driver sets off"
         }
       ]
     }
