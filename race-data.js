@@ -1,5 +1,5 @@
 window.RACE_DATA = {
-  "version": "2026-11-24.2",
+  "version": "2026-11-24.3",
   "status": "Provisional 32h34m baseline; optional shared 20min nap reserve",
   "source": "Race Control Data",
   "checkpoints": [
@@ -33,7 +33,9 @@ window.RACE_DATA = {
       "stop_category": "Aid / HQ",
       "stop_purpose": "Runner-only service or HQ",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": "Labelled food bag; filled spare flasks; waste bag; phone/tracker; mandatory kit and start supplies",
+      "pre_arrival_setup": "Check start kit and supplies before registration"
     },
     {
       "checkpoint_id": "aid-offham",
@@ -65,7 +67,9 @@ window.RACE_DATA = {
       "stop_category": "Aid / HQ",
       "stop_purpose": "Runner-only service or HQ",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": null,
+      "pre_arrival_setup": null
     },
     {
       "checkpoint_id": "crew-01",
@@ -97,7 +101,9 @@ window.RACE_DATA = {
       "stop_category": "Quick",
       "stop_purpose": "Morning top-up",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": "Labelled food bag; filled spare flasks; waste bag; phone/tracker",
+      "pre_arrival_setup": "Have bag and flasks ready; keep other kit in car"
     },
     {
       "checkpoint_id": "aid-glynde",
@@ -129,7 +135,9 @@ window.RACE_DATA = {
       "stop_category": "Aid / HQ",
       "stop_purpose": "Runner-only service or HQ",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": null,
+      "pre_arrival_setup": null
     },
     {
       "checkpoint_id": "aid-alfriston",
@@ -161,7 +169,9 @@ window.RACE_DATA = {
       "stop_category": "Aid / HQ",
       "stop_purpose": "Runner-only service or HQ",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": null,
+      "pre_arrival_setup": null
     },
     {
       "checkpoint_id": "aid-jevington",
@@ -193,7 +203,9 @@ window.RACE_DATA = {
       "stop_category": "Aid / HQ",
       "stop_purpose": "Runner-only service or HQ",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": null,
+      "pre_arrival_setup": null
     },
     {
       "checkpoint_id": "crew-02",
@@ -225,7 +237,9 @@ window.RACE_DATA = {
       "stop_category": "Major",
       "stop_purpose": "Lunch; seated recovery and foot check",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": "Labelled food bag; filled spare flasks; waste bag; phone/tracker; Reclining chair; folding table; blanket or sleeping bag; waterproof mat; foot-care kit; dry socks and layers; insulated mug and utensils; prepared food and hot drink",
+      "pre_arrival_setup": "Set up chair and meal before arrival; foot-care kit open"
     },
     {
       "checkpoint_id": "aid-east-dean",
@@ -257,7 +271,9 @@ window.RACE_DATA = {
       "stop_category": "Aid / HQ",
       "stop_purpose": "Runner-only service or HQ",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": null,
+      "pre_arrival_setup": null
     },
     {
       "checkpoint_id": "crew-03",
@@ -289,7 +305,9 @@ window.RACE_DATA = {
       "stop_category": "Quick",
       "stop_purpose": "Quick handover",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": "Labelled food bag; filled spare flasks; waste bag; phone/tracker",
+      "pre_arrival_setup": "Quick handover only; keep car packed"
     },
     {
       "checkpoint_id": "crew-04",
@@ -321,7 +339,9 @@ window.RACE_DATA = {
       "stop_category": "Routine",
       "stop_purpose": "Water stock and lights",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": "Labelled food bag; filled spare flasks; waste bag; phone/tracker; spare head torches, batteries and dry layers; water containers",
+      "pre_arrival_setup": "Prepare lighting swap and water replenishment"
     },
     {
       "checkpoint_id": "aid-litlington",
@@ -353,7 +373,9 @@ window.RACE_DATA = {
       "stop_category": "Aid / HQ",
       "stop_purpose": "Runner-only service or HQ",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": null,
+      "pre_arrival_setup": null
     },
     {
       "checkpoint_id": "crew-05",
@@ -385,7 +407,9 @@ window.RACE_DATA = {
       "stop_category": "Quick",
       "stop_purpose": "Early dinner option; snack",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": "Labelled food bag; filled spare flasks; waste bag; phone/tracker; hot food flask if requested; Crew head torches or lantern; reflective clothing",
+      "pre_arrival_setup": "Have optional dinner ready in insulated flask"
     },
     {
       "checkpoint_id": "crew-06",
@@ -417,7 +441,9 @@ window.RACE_DATA = {
       "stop_category": "Quick",
       "stop_purpose": "Dinner alternative; check warmth",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": "Labelled food bag; filled spare flasks; waste bag; phone/tracker; hot drink flask; dry layer; Crew head torches or lantern; reflective clothing",
+      "pre_arrival_setup": "Avoid duplicate dinner; prepare warm layer"
     },
     {
       "checkpoint_id": "aid-southease",
@@ -449,7 +475,9 @@ window.RACE_DATA = {
       "stop_category": "Aid / HQ",
       "stop_purpose": "Runner-only service or HQ",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": null,
+      "pre_arrival_setup": null
     },
     {
       "checkpoint_id": "crew-07",
@@ -481,7 +509,9 @@ window.RACE_DATA = {
       "stop_category": "Major",
       "stop_purpose": "Dinner; hot food, feet, dry kit and lights",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": "Labelled food bag; filled spare flasks; waste bag; phone/tracker; Reclining chair; folding table; blanket or sleeping bag; waterproof mat; foot-care kit; dry socks and layers; insulated mug and utensils; prepared food and hot drink; lighting and charging box; overnight food reserve; Crew head torches or lantern; reflective clothing",
+      "pre_arrival_setup": "Set up sheltered seat and hot meal; prepare overnight supplies"
     },
     {
       "checkpoint_id": "aid-housedean",
@@ -513,7 +543,9 @@ window.RACE_DATA = {
       "stop_category": "Aid / HQ",
       "stop_purpose": "Runner-only service or HQ",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": null,
+      "pre_arrival_setup": null
     },
     {
       "checkpoint_id": "aid-saddlescombe",
@@ -545,7 +577,9 @@ window.RACE_DATA = {
       "stop_category": "Aid / HQ",
       "stop_purpose": "Runner-only service or HQ",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": null,
+      "pre_arrival_setup": null
     },
     {
       "checkpoint_id": "crew-08",
@@ -577,7 +611,9 @@ window.RACE_DATA = {
       "stop_category": "Major",
       "stop_purpose": "Overnight recovery; hot food, warmth, assess nap need",
       "optional_nap_min": 20,
-      "nap_guidance": "Optional additional 10–20 min supervised nap, one shared contingency; warm permitted shelter, assess alertness; not compulsory"
+      "nap_guidance": "Optional additional 10–20 min supervised nap, one shared contingency; warm permitted shelter, assess alertness; not compulsory",
+      "equipment_setup": "Labelled food bag; filled spare flasks; waste bag; phone/tracker; Reclining chair; folding table; blanket or sleeping bag; waterproof mat; foot-care kit; dry socks and layers; insulated mug and utensils; prepared food and hot drink; timer; permitted sheltered rest space; Crew head torches or lantern; reflective clothing",
+      "pre_arrival_setup": "Set up warm seat and hot food; optional nap only in permitted safe location"
     },
     {
       "checkpoint_id": "aid-mile-oak",
@@ -609,7 +645,9 @@ window.RACE_DATA = {
       "stop_category": "Aid / HQ",
       "stop_purpose": "Runner-only service or HQ",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": null,
+      "pre_arrival_setup": null
     },
     {
       "checkpoint_id": "crew-09",
@@ -641,7 +679,9 @@ window.RACE_DATA = {
       "stop_category": "Quick",
       "stop_purpose": "Alertness check; assess nap need",
       "optional_nap_min": 20,
-      "nap_guidance": "Optional additional 10–20 min supervised nap, one shared contingency; warm permitted shelter, assess alertness; not compulsory"
+      "nap_guidance": "Optional additional 10–20 min supervised nap, one shared contingency; warm permitted shelter, assess alertness; not compulsory",
+      "equipment_setup": "Labelled food bag; filled spare flasks; waste bag; phone/tracker; Crew head torches or lantern; reflective clothing; reclining chair, blanket and timer only if nap needed",
+      "pre_arrival_setup": "Keep nap equipment accessible; deploy only if needed and safe"
     },
     {
       "checkpoint_id": "crew-10",
@@ -673,7 +713,9 @@ window.RACE_DATA = {
       "stop_category": "Quick",
       "stop_purpose": "Quick handover; alertness check",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": "Labelled food bag; filled spare flasks; waste bag; phone/tracker; Crew head torches or lantern; reflective clothing",
+      "pre_arrival_setup": "Quick handover; check alertness"
     },
     {
       "checkpoint_id": "aid-findon",
@@ -705,7 +747,9 @@ window.RACE_DATA = {
       "stop_category": "Aid / HQ",
       "stop_purpose": "Runner-only service or HQ",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": null,
+      "pre_arrival_setup": null
     },
     {
       "checkpoint_id": "crew-11",
@@ -737,7 +781,9 @@ window.RACE_DATA = {
       "stop_category": "Major",
       "stop_purpose": "Breakfast; foot care and daylight reset",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": "Labelled food bag; filled spare flasks; waste bag; phone/tracker; Reclining chair; folding table; blanket or sleeping bag; waterproof mat; foot-care kit; dry socks and layers; insulated mug and utensils; prepared food and hot drink; breakfast and hot drink; spare power",
+      "pre_arrival_setup": "Prepare breakfast and seated foot care"
     },
     {
       "checkpoint_id": "crew-12",
@@ -769,7 +815,9 @@ window.RACE_DATA = {
       "stop_category": "Quick",
       "stop_purpose": "Second breakfast or snack",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": "Labelled food bag; filled spare flasks; waste bag; phone/tracker; hot drink flask if requested",
+      "pre_arrival_setup": "Have snack ready; review water stock"
     },
     {
       "checkpoint_id": "aid-fulking",
@@ -801,7 +849,9 @@ window.RACE_DATA = {
       "stop_category": "Aid / HQ",
       "stop_purpose": "Runner-only service or HQ",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": null,
+      "pre_arrival_setup": null
     },
     {
       "checkpoint_id": "crew-13",
@@ -833,7 +883,9 @@ window.RACE_DATA = {
       "stop_category": "Quick",
       "stop_purpose": "Snack; assess final leg",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": "Labelled food bag; filled spare flasks; waste bag; phone/tracker",
+      "pre_arrival_setup": "Prepare snack and check next ETA"
     },
     {
       "checkpoint_id": "aid-clayton",
@@ -865,7 +917,9 @@ window.RACE_DATA = {
       "stop_category": "Aid / HQ",
       "stop_purpose": "Runner-only service or HQ",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": null,
+      "pre_arrival_setup": null
     },
     {
       "checkpoint_id": "crew-14",
@@ -897,7 +951,9 @@ window.RACE_DATA = {
       "stop_category": "Routine",
       "stop_purpose": "Lunch or small snack; final reset",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": "Labelled food bag; filled spare flasks; waste bag; phone/tracker; folding chair; warm layer; lunch or snack; foot-care kit",
+      "pre_arrival_setup": "Prepare seat and small meal if wanted"
     },
     {
       "checkpoint_id": "aid-ditchling",
@@ -929,7 +985,9 @@ window.RACE_DATA = {
       "stop_category": "Aid / HQ",
       "stop_purpose": "Runner-only service or HQ",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": null,
+      "pre_arrival_setup": null
     },
     {
       "checkpoint_id": "crew-15",
@@ -961,7 +1019,9 @@ window.RACE_DATA = {
       "stop_category": "Quick",
       "stop_purpose": "Final top-up",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": "Labelled food bag; filled spare flasks; waste bag; phone/tracker",
+      "pre_arrival_setup": "Quick final top-up; prepare finish bag"
     },
     {
       "checkpoint_id": "finish",
@@ -993,7 +1053,9 @@ window.RACE_DATA = {
       "stop_category": "Aid / HQ",
       "stop_purpose": "Runner-only service or HQ",
       "optional_nap_min": 0,
-      "nap_guidance": "No planned sleep"
+      "nap_guidance": "No planned sleep",
+      "equipment_setup": "Finish bag; dry warm clothes and shoes; blanket; recovery food and drink; chair if permitted",
+      "pre_arrival_setup": "Prepare warm recovery supplies and rested driver"
     }
   ]
 };
