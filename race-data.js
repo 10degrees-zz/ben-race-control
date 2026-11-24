@@ -1,6 +1,6 @@
 window.RACE_DATA = {
-  "version": "2026-11-24.1",
-  "status": "Provisional",
+  "version": "2026-11-24.2",
+  "status": "Provisional 32h34m baseline; optional shared 20min nap reserve",
   "source": "Race Control Data",
   "checkpoints": [
     {
@@ -29,7 +29,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": "Start: 20L potable + washing water separate; collect waste; verify next ETA.",
-      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed"
+      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed",
+      "stop_category": "Aid / HQ",
+      "stop_purpose": "Runner-only service or HQ",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "aid-offham",
@@ -57,7 +61,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": null,
-      "welfare_checks": null
+      "welfare_checks": null,
+      "stop_category": "Aid / HQ",
+      "stop_purpose": "Runner-only service or HQ",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "crew-01",
@@ -69,7 +77,7 @@ window.RACE_DATA = {
       "what3words": null,
       "planned_use": "To decide",
       "arrival32_min": 540,
-      "departure32_min": 547,
+      "departure32_min": 545,
       "rice_blocks": 7,
       "soreen_portions": 4,
       "potato_portions": 3,
@@ -85,7 +93,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": "Morning; check stock; collect waste; verify next ETA.",
-      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed"
+      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed",
+      "stop_category": "Quick",
+      "stop_purpose": "Morning top-up",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "aid-glynde",
@@ -96,8 +108,8 @@ window.RACE_DATA = {
       "cutoff_min": null,
       "what3words": null,
       "planned_use": "Yes",
-      "arrival32_min": 587,
-      "departure32_min": 595,
+      "arrival32_min": 585,
+      "departure32_min": 593,
       "rice_blocks": null,
       "soreen_portions": null,
       "potato_portions": null,
@@ -113,7 +125,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": null,
-      "welfare_checks": null
+      "welfare_checks": null,
+      "stop_category": "Aid / HQ",
+      "stop_purpose": "Runner-only service or HQ",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "aid-alfriston",
@@ -124,8 +140,8 @@ window.RACE_DATA = {
       "cutoff_min": null,
       "what3words": null,
       "planned_use": "Yes",
-      "arrival32_min": 699,
-      "departure32_min": 707,
+      "arrival32_min": 697,
+      "departure32_min": 705,
       "rice_blocks": null,
       "soreen_portions": null,
       "potato_portions": null,
@@ -141,7 +157,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": null,
-      "welfare_checks": null
+      "welfare_checks": null,
+      "stop_category": "Aid / HQ",
+      "stop_purpose": "Runner-only service or HQ",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "aid-jevington",
@@ -152,8 +172,8 @@ window.RACE_DATA = {
       "cutoff_min": null,
       "what3words": null,
       "planned_use": "Yes",
-      "arrival32_min": 772,
-      "departure32_min": 780,
+      "arrival32_min": 770,
+      "departure32_min": 778,
       "rice_blocks": null,
       "soreen_portions": null,
       "potato_portions": null,
@@ -169,7 +189,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": null,
-      "welfare_checks": null
+      "welfare_checks": null,
+      "stop_category": "Aid / HQ",
+      "stop_purpose": "Runner-only service or HQ",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "crew-02",
@@ -180,8 +204,8 @@ window.RACE_DATA = {
       "cutoff_min": null,
       "what3words": "///cool.blank.hears",
       "planned_use": "To decide",
-      "arrival32_min": 802,
-      "departure32_min": 808,
+      "arrival32_min": 800,
+      "departure32_min": 815,
       "rice_blocks": 2,
       "soreen_portions": 1,
       "potato_portions": 1,
@@ -197,7 +221,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": "Lunch; water purchase review; collect waste; verify next ETA.",
-      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed"
+      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed",
+      "stop_category": "Major",
+      "stop_purpose": "Lunch; seated recovery and foot check",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "aid-east-dean",
@@ -208,8 +236,8 @@ window.RACE_DATA = {
       "cutoff_min": 1020,
       "what3words": null,
       "planned_use": "Yes",
-      "arrival32_min": 864,
-      "departure32_min": 872,
+      "arrival32_min": 871,
+      "departure32_min": 879,
       "rice_blocks": null,
       "soreen_portions": null,
       "potato_portions": null,
@@ -225,7 +253,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": null,
-      "welfare_checks": null
+      "welfare_checks": null,
+      "stop_category": "Aid / HQ",
+      "stop_purpose": "Runner-only service or HQ",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "crew-03",
@@ -236,8 +268,8 @@ window.RACE_DATA = {
       "cutoff_min": null,
       "what3words": "///wheels.chaos.bronzes",
       "planned_use": "To decide",
-      "arrival32_min": 872,
-      "departure32_min": 877,
+      "arrival32_min": 879,
+      "departure32_min": 882,
       "rice_blocks": 2,
       "soreen_portions": 1,
       "potato_portions": 1,
@@ -253,7 +285,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": "Optional; collect waste; verify next ETA.",
-      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed"
+      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed",
+      "stop_category": "Quick",
+      "stop_purpose": "Quick handover",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "crew-04",
@@ -264,8 +300,8 @@ window.RACE_DATA = {
       "cutoff_min": null,
       "what3words": "///applauded.community.stands",
       "planned_use": "To decide",
-      "arrival32_min": 953,
-      "departure32_min": 961,
+      "arrival32_min": 958,
+      "departure32_min": 966,
       "rice_blocks": 3,
       "soreen_portions": 2,
       "potato_portions": 1,
@@ -281,7 +317,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": "Main evening water replenishment; collect waste; verify next ETA.",
-      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed"
+      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed",
+      "stop_category": "Routine",
+      "stop_purpose": "Water stock and lights",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "aid-litlington",
@@ -292,8 +332,8 @@ window.RACE_DATA = {
       "cutoff_min": 1170,
       "what3words": null,
       "planned_use": "Yes",
-      "arrival32_min": 987,
-      "departure32_min": 995,
+      "arrival32_min": 992,
+      "departure32_min": 1000,
       "rice_blocks": null,
       "soreen_portions": null,
       "potato_portions": null,
@@ -309,7 +349,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": null,
-      "welfare_checks": null
+      "welfare_checks": null,
+      "stop_category": "Aid / HQ",
+      "stop_purpose": "Runner-only service or HQ",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "crew-05",
@@ -320,8 +364,8 @@ window.RACE_DATA = {
       "cutoff_min": null,
       "what3words": "///prospers.birdcage.shifting",
       "planned_use": "To decide",
-      "arrival32_min": 1068,
-      "departure32_min": 1073,
+      "arrival32_min": 1073,
+      "departure32_min": 1078,
       "rice_blocks": 1,
       "soreen_portions": 1,
       "potato_portions": 1,
@@ -337,7 +381,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": "Dinner option; collect waste; verify next ETA.",
-      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed"
+      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed",
+      "stop_category": "Quick",
+      "stop_purpose": "Early dinner option; snack",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "crew-06",
@@ -348,8 +396,8 @@ window.RACE_DATA = {
       "cutoff_min": null,
       "what3words": "///diverts.ringside.zealous",
       "planned_use": "To decide",
-      "arrival32_min": 1104,
-      "departure32_min": 1109,
+      "arrival32_min": 1109,
+      "departure32_min": 1114,
       "rice_blocks": 2,
       "soreen_portions": 1,
       "potato_portions": 1,
@@ -365,7 +413,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": "Dinner alternative; collect waste; verify next ETA.",
-      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed"
+      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed",
+      "stop_category": "Quick",
+      "stop_purpose": "Dinner alternative; check warmth",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "aid-southease",
@@ -376,8 +428,8 @@ window.RACE_DATA = {
       "cutoff_min": 1350,
       "what3words": null,
       "planned_use": "Yes",
-      "arrival32_min": 1153,
-      "departure32_min": 1161,
+      "arrival32_min": 1158,
+      "departure32_min": 1166,
       "rice_blocks": null,
       "soreen_portions": null,
       "potato_portions": null,
@@ -393,7 +445,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": null,
-      "welfare_checks": null
+      "welfare_checks": null,
+      "stop_category": "Aid / HQ",
+      "stop_purpose": "Runner-only service or HQ",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "crew-07",
@@ -404,8 +460,8 @@ window.RACE_DATA = {
       "cutoff_min": null,
       "what3words": "///articulated.tram.chained",
       "planned_use": "To decide",
-      "arrival32_min": 1168,
-      "departure32_min": 1178,
+      "arrival32_min": 1173,
+      "departure32_min": 1193,
       "rice_blocks": 9,
       "soreen_portions": 5,
       "potato_portions": 3,
@@ -421,7 +477,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": "Dinner; overnight stock review; collect waste; verify next ETA.",
-      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed"
+      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed",
+      "stop_category": "Major",
+      "stop_purpose": "Dinner; hot food, feet, dry kit and lights",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "aid-housedean",
@@ -432,8 +492,8 @@ window.RACE_DATA = {
       "cutoff_min": 1470,
       "what3words": null,
       "planned_use": "Yes",
-      "arrival32_min": 1288,
-      "departure32_min": 1296,
+      "arrival32_min": 1303,
+      "departure32_min": 1311,
       "rice_blocks": null,
       "soreen_portions": null,
       "potato_portions": null,
@@ -449,7 +509,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": null,
-      "welfare_checks": null
+      "welfare_checks": null,
+      "stop_category": "Aid / HQ",
+      "stop_purpose": "Runner-only service or HQ",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "aid-saddlescombe",
@@ -460,8 +524,8 @@ window.RACE_DATA = {
       "cutoff_min": 1710,
       "what3words": null,
       "planned_use": "Yes",
-      "arrival32_min": 1536,
-      "departure32_min": 1544,
+      "arrival32_min": 1551,
+      "departure32_min": 1559,
       "rice_blocks": null,
       "soreen_portions": null,
       "potato_portions": null,
@@ -477,7 +541,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": null,
-      "welfare_checks": null
+      "welfare_checks": null,
+      "stop_category": "Aid / HQ",
+      "stop_purpose": "Runner-only service or HQ",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "crew-08",
@@ -488,8 +556,8 @@ window.RACE_DATA = {
       "cutoff_min": null,
       "what3words": "///crossings.remodels.compiler",
       "planned_use": "To decide",
-      "arrival32_min": 1553,
-      "departure32_min": 1563,
+      "arrival32_min": 1568,
+      "departure32_min": 1588,
       "rice_blocks": 4,
       "soreen_portions": 2,
       "potato_portions": 2,
@@ -505,7 +573,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": "Overnight meal; stock review; collect waste; verify next ETA.",
-      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed"
+      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed",
+      "stop_category": "Major",
+      "stop_purpose": "Overnight recovery; hot food, warmth, assess nap need",
+      "optional_nap_min": 20,
+      "nap_guidance": "Optional additional 10–20 min supervised nap, one shared contingency; warm permitted shelter, assess alertness; not compulsory"
     },
     {
       "checkpoint_id": "aid-mile-oak",
@@ -516,8 +588,8 @@ window.RACE_DATA = {
       "cutoff_min": 1800,
       "what3words": null,
       "planned_use": "Yes",
-      "arrival32_min": 1650,
-      "departure32_min": 1658,
+      "arrival32_min": 1675,
+      "departure32_min": 1683,
       "rice_blocks": null,
       "soreen_portions": null,
       "potato_portions": null,
@@ -533,7 +605,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": null,
-      "welfare_checks": null
+      "welfare_checks": null,
+      "stop_category": "Aid / HQ",
+      "stop_purpose": "Runner-only service or HQ",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "crew-09",
@@ -544,8 +620,8 @@ window.RACE_DATA = {
       "cutoff_min": null,
       "what3words": "///familiar.employers.campus",
       "planned_use": "To decide",
-      "arrival32_min": 1712,
-      "departure32_min": 1717,
+      "arrival32_min": 1737,
+      "departure32_min": 1742,
       "rice_blocks": 1,
       "soreen_portions": 0,
       "potato_portions": 0,
@@ -561,7 +637,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": "Hot snack; collect waste; verify next ETA.",
-      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed"
+      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed",
+      "stop_category": "Quick",
+      "stop_purpose": "Alertness check; assess nap need",
+      "optional_nap_min": 20,
+      "nap_guidance": "Optional additional 10–20 min supervised nap, one shared contingency; warm permitted shelter, assess alertness; not compulsory"
     },
     {
       "checkpoint_id": "crew-10",
@@ -572,8 +652,8 @@ window.RACE_DATA = {
       "cutoff_min": null,
       "what3words": "///baroness.mice.obliging",
       "planned_use": "To decide",
-      "arrival32_min": 1733,
-      "departure32_min": 1738,
+      "arrival32_min": 1758,
+      "departure32_min": 1763,
       "rice_blocks": 3,
       "soreen_portions": 2,
       "potato_portions": 1,
@@ -589,7 +669,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": "Alternative to Beeding Hill; collect waste; verify next ETA.",
-      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed"
+      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed",
+      "stop_category": "Quick",
+      "stop_purpose": "Quick handover; alertness check",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "aid-findon",
@@ -600,8 +684,8 @@ window.RACE_DATA = {
       "cutoff_min": 2010,
       "what3words": null,
       "planned_use": "Yes",
-      "arrival32_min": 1843,
-      "departure32_min": 1851,
+      "arrival32_min": 1868,
+      "departure32_min": 1876,
       "rice_blocks": null,
       "soreen_portions": null,
       "potato_portions": null,
@@ -617,7 +701,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": null,
-      "welfare_checks": null
+      "welfare_checks": null,
+      "stop_category": "Aid / HQ",
+      "stop_purpose": "Runner-only service or HQ",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "crew-11",
@@ -628,8 +716,8 @@ window.RACE_DATA = {
       "cutoff_min": null,
       "what3words": "///held.radically.checked",
       "planned_use": "To decide",
-      "arrival32_min": 1859,
-      "departure32_min": 1869,
+      "arrival32_min": 1884,
+      "departure32_min": 1904,
       "rice_blocks": 4,
       "soreen_portions": 2,
       "potato_portions": 2,
@@ -645,7 +733,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": "Breakfast; water review; collect waste; verify next ETA.",
-      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed"
+      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed",
+      "stop_category": "Major",
+      "stop_purpose": "Breakfast; foot care and daylight reset",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "crew-12",
@@ -656,8 +748,8 @@ window.RACE_DATA = {
       "cutoff_min": null,
       "what3words": "///armed.spires.indulges",
       "planned_use": "To decide",
-      "arrival32_min": 1970,
-      "departure32_min": 1978,
+      "arrival32_min": 2005,
+      "departure32_min": 2010,
       "rice_blocks": 4,
       "soreen_portions": 2,
       "potato_portions": 1,
@@ -673,7 +765,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": "Second breakfast; final purchase review; collect waste; verify next ETA.",
-      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed"
+      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed",
+      "stop_category": "Quick",
+      "stop_purpose": "Second breakfast or snack",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "aid-fulking",
@@ -684,8 +780,8 @@ window.RACE_DATA = {
       "cutoff_min": 2310,
       "what3words": null,
       "planned_use": "Yes",
-      "arrival32_min": 2072,
-      "departure32_min": 2080,
+      "arrival32_min": 2104,
+      "departure32_min": 2112,
       "rice_blocks": null,
       "soreen_portions": null,
       "potato_portions": null,
@@ -701,7 +797,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": null,
-      "welfare_checks": null
+      "welfare_checks": null,
+      "stop_category": "Aid / HQ",
+      "stop_purpose": "Runner-only service or HQ",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "crew-13",
@@ -712,8 +812,8 @@ window.RACE_DATA = {
       "cutoff_min": null,
       "what3words": "///themes.ambushes.fortified",
       "planned_use": "To decide",
-      "arrival32_min": 2100,
-      "departure32_min": 2106,
+      "arrival32_min": 2132,
+      "departure32_min": 2137,
       "rice_blocks": 3,
       "soreen_portions": 2,
       "potato_portions": 1,
@@ -729,7 +829,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": "Snack; collect waste; verify next ETA.",
-      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed"
+      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed",
+      "stop_category": "Quick",
+      "stop_purpose": "Snack; assess final leg",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "aid-clayton",
@@ -740,8 +844,8 @@ window.RACE_DATA = {
       "cutoff_min": 2400,
       "what3words": null,
       "planned_use": "Yes",
-      "arrival32_min": 2159,
-      "departure32_min": 2167,
+      "arrival32_min": 2190,
+      "departure32_min": 2198,
       "rice_blocks": null,
       "soreen_portions": null,
       "potato_portions": null,
@@ -757,7 +861,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": null,
-      "welfare_checks": null
+      "welfare_checks": null,
+      "stop_category": "Aid / HQ",
+      "stop_purpose": "Runner-only service or HQ",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "crew-14",
@@ -768,8 +876,8 @@ window.RACE_DATA = {
       "cutoff_min": null,
       "what3words": "///surfacing.sigh.unzips",
       "planned_use": "To decide",
-      "arrival32_min": 2208,
-      "departure32_min": 2214,
+      "arrival32_min": 2239,
+      "departure32_min": 2249,
       "rice_blocks": 2,
       "soreen_portions": 1,
       "potato_portions": 1,
@@ -785,7 +893,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": "Lunch; collect waste; verify next ETA.",
-      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed"
+      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed",
+      "stop_category": "Routine",
+      "stop_purpose": "Lunch or small snack; final reset",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "aid-ditchling",
@@ -796,8 +908,8 @@ window.RACE_DATA = {
       "cutoff_min": 2490,
       "what3words": null,
       "planned_use": "Yes",
-      "arrival32_min": 2254,
-      "departure32_min": 2262,
+      "arrival32_min": 2289,
+      "departure32_min": 2297,
       "rice_blocks": null,
       "soreen_portions": null,
       "potato_portions": null,
@@ -813,7 +925,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": null,
-      "welfare_checks": null
+      "welfare_checks": null,
+      "stop_category": "Aid / HQ",
+      "stop_purpose": "Runner-only service or HQ",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "crew-15",
@@ -824,8 +940,8 @@ window.RACE_DATA = {
       "cutoff_min": null,
       "what3words": "///horseshoe.shark.hers",
       "planned_use": "To decide",
-      "arrival32_min": 2266,
-      "departure32_min": 2270,
+      "arrival32_min": 2301,
+      "departure32_min": 2304,
       "rice_blocks": 2,
       "soreen_portions": 1,
       "potato_portions": 1,
@@ -841,7 +957,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": "Final top-up; collect waste; verify next ETA.",
-      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed"
+      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed",
+      "stop_category": "Quick",
+      "stop_purpose": "Final top-up",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     },
     {
       "checkpoint_id": "finish",
@@ -852,8 +972,8 @@ window.RACE_DATA = {
       "cutoff_min": 2520,
       "what3words": null,
       "planned_use": "Yes",
-      "arrival32_min": 2340,
-      "departure32_min": 2340,
+      "arrival32_min": 2374,
+      "departure32_min": 2374,
       "rice_blocks": 0,
       "soreen_portions": 0,
       "potato_portions": 0,
@@ -869,7 +989,11 @@ window.RACE_DATA = {
       "electrolyte_ml": null,
       "kit_changes": null,
       "crew_actions": "Recovery; collect waste; verify next ETA.",
-      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed"
+      "welfare_checks": "Feet, warmth, nausea, alertness; check kit as needed",
+      "stop_category": "Aid / HQ",
+      "stop_purpose": "Runner-only service or HQ",
+      "optional_nap_min": 0,
+      "nap_guidance": "No planned sleep"
     }
   ]
 };
