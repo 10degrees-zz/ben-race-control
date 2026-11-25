@@ -17,7 +17,7 @@
 #runner-area .timeline strong { font-size: 13px; }
 #runner-area .timeline .status { display: block; color: #c4d3e1; }
 .role-switch button{flex:1}.role-switch{margin:12px 0}#runner-area h2{margin:18px 0 8px}#runner-area label{display:block;margin-bottom:5px}#runner-area p{margin:3px 0}#runner-area .timeline button{border-radius:0}#runner-area .card .distance{line-height:1.2}#runner-area .timeline button:focus-visible{outline-offset:-3px}
-#locate-runner{width:100%;background:#5eead4;color:#10232e;font-weight:700}#runner-location-status{min-height:24px}#crew-legs .line{display:block}#crew-legs .line small{display:block;margin-top:3px}#crew-legs .leg-distance{float:right;margin-left:8px}</style><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg"></head><body><main><header><small class="teal">WINTER ON THE DOWNS · 5–6 DEC 2026</small><h1>Ben – Race Control</h1><p class="warning amber">App version 1.8 · Spreadsheet snapshot · provisional</p><small id="storage"></small></header><div class="row role-switch" role="group" aria-label="Select role">
+#locate-runner{width:100%;background:#5eead4;color:#10232e;font-weight:700}#runner-location-status{min-height:24px}#crew-legs .line{display:block}#crew-legs .line small{display:block;margin-top:3px}#crew-legs .leg-distance{float:right;margin-left:8px}</style><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg"></head><body><main><header><small class="teal">WINTER ON THE DOWNS · 5–6 DEC 2026</small><h1>Ben – Race Control</h1><p class="warning amber">App version 1.9 · Spreadsheet snapshot · provisional</p><small id="storage"></small></header><div class="row role-switch" role="group" aria-label="Select role">
 <button id="role-crew" type="button" aria-pressed="true">Crew</button>
 <button id="role-runner" type="button" aria-pressed="false">Runner</button>
 </div>
@@ -25,6 +25,7 @@
 <h2>Ben’s race plan</h2>
 <button id="locate-runner" type="button">Where am I?</button>
 <p id="runner-location-status" role="status"></p>
+<p id="phone-location" hidden><span id="phone-location-text"></span> · <a id="phone-location-map" target="_blank" rel="noopener noreferrer">View on map</a></p>
 <label for="checkpoint">Preview from a checkpoint</label>
 <select id="checkpoint"></select>
 <h2>What’s next</h2>
@@ -36,7 +37,7 @@
 <ol class="timeline" id="timeline"></ol>
 </div>
 <div id="crew-area"><div class="row"><button id="homeButton" onclick="showPage('home')">Main menu</button><button onclick="showPage('race')">Race control</button></div><div id="prepView" hidden></div><div id="raceView"><section><div class="station-picker"><button id="prev" aria-label="Previous station">‹</button><select id="station" aria-label="Select crew station"></select><button id="next" aria-label="Next station">›</button></div><div id="heading"></div></section><nav id="nav"></nav><div id="view"></div></div></div><footer><small>Offline core · navigation links need connectivity · welfare before pace</small></footer></main><script src="./race-data.js"></script><script src="./race-course.js"></script><script>
-const APP_VERSION = '1.8';
+const APP_VERSION = '1.9';
 const data=window.RACE_DATA;
 const crew=data.checkpoints.filter(r=>r.type!=='Aid');
 const names=crew.map(r=>r.name), miles=crew.map(r=>r.mile), times=crew.map(r=>r.arrival32_min), stops=crew.map(r=>r.departure32_min-r.arrival32_min);
@@ -150,6 +151,7 @@ const timeline = document.getElementById('timeline');
 const support = document.getElementById('support');
 const locationStatus = $('runner-location-status');
 const locateButton = $('locate-runner');
+const phoneLocation = $('phone-location');
 let locationRequest = 0;
 const mile = value => value.toFixed(1);
 const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
@@ -162,6 +164,7 @@ function card(label, stop, from, tone) {
 }
 function render(index) {
   locationRequest++;
+  phoneLocation.hidden = true;
   locateButton.disabled = false;
   locationStatus.textContent = '';
   selector.value = index;
@@ -191,7 +194,8 @@ $('crew-legs').innerHTML = crewPlan.slice(1).map((to, index) => {
   return `<div class="line"><strong class="leg-distance">${mile(to.mile-from.mile)} mi</strong>${escapeHtml(title(from))} → ${escapeHtml(title(to))}<small>${names}</small></div>`;
 }).join('');
 locateButton.onclick = () => {
-  if (!navigator.geolocation || !window.RACE_COURSE) {
+  phoneLocation.hidden = true;
+  if (!navigator.geolocation) {
     locationStatus.textContent = 'Location unavailable. Pick a checkpoint below.';
     return;
   }
@@ -205,9 +209,14 @@ locateButton.onclick = () => {
   };
   navigator.geolocation.getCurrentPosition(position => {
     if (!complete()) return;
+    const {latitude, longitude, accuracy} = position.coords;
+    const coordinates = latitude.toFixed(5) + ', ' + longitude.toFixed(5);
+    $('phone-location-text').textContent = 'Phone location: ' + coordinates + ' (±' + Math.round(accuracy) + ' m)';
+    $('phone-location-map').href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(coordinates);
+    phoneLocation.hidden = false;
     const estimatedMile = matchRaceLocation(window.RACE_COURSE, position.coords);
     if (estimatedMile === null) {
-      locationStatus.textContent = 'Unable to identify a single section of the route. Pick a checkpoint or try again.';
+      locationStatus.textContent = 'Phone location found. No reliable race-route match. Pick a checkpoint to preview the course.';
       return;
     }
     const nearbyStop = route.find(stop => Math.abs(stop.mile - estimatedMile) <= 0.2);
