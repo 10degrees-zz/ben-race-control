@@ -17,22 +17,26 @@
 #runner-area .timeline strong { font-size: 13px; }
 #runner-area .timeline .status { display: block; color: #c4d3e1; }
 .role-switch button{flex:1}.role-switch{margin:12px 0}#runner-area h2{margin:18px 0 8px}#runner-area label{display:block;margin-bottom:5px}#runner-area p{margin:3px 0}#runner-area .timeline button{border-radius:0}#runner-area .card .distance{line-height:1.2}#runner-area .timeline button:focus-visible{outline-offset:-3px}
-</style><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg"></head><body><main><header><small class="teal">WINTER ON THE DOWNS · 5–6 DEC 2026</small><h1>Ben – Race Control</h1><p class="warning amber">App version 1.7 · Spreadsheet snapshot · provisional</p><small id="storage"></small></header><div class="row role-switch" role="group" aria-label="Select role">
+#locate-runner{width:100%;background:#5eead4;color:#10232e;font-weight:700}#runner-location-status{min-height:24px}#crew-legs .line{display:block}#crew-legs .line small{display:block;margin-top:3px}#crew-legs .leg-distance{float:right;margin-left:8px}</style><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg"></head><body><main><header><small class="teal">WINTER ON THE DOWNS · 5–6 DEC 2026</small><h1>Ben – Race Control</h1><p class="warning amber">App version 1.8 · Spreadsheet snapshot · provisional</p><small id="storage"></small></header><div class="row role-switch" role="group" aria-label="Select role">
 <button id="role-crew" type="button" aria-pressed="true">Crew</button>
 <button id="role-runner" type="button" aria-pressed="false">Runner</button>
 </div>
 <div id="runner-area" hidden>
 <h2>Ben’s race plan</h2>
+<button id="locate-runner" type="button">Where am I?</button>
+<p id="runner-location-status" role="status"></p>
 <label for="checkpoint">Preview from a checkpoint</label>
 <select id="checkpoint"></select>
 <h2>What’s next</h2>
 <div id="support" aria-live="polite"></div>
+<h2>Between crew meet-ups</h2>
+<div id="crew-legs"></div>
 <h2>Full race timeline</h2>
 <p class="muted">Tap a stop to see what follows. The right column shows miles from the previous stop.</p>
 <ol class="timeline" id="timeline"></ol>
 </div>
-<div id="crew-area"><div class="row"><button id="homeButton" onclick="showPage('home')">Main menu</button><button onclick="showPage('race')">Race control</button></div><div id="prepView" hidden></div><div id="raceView"><section><div class="station-picker"><button id="prev" aria-label="Previous station">‹</button><select id="station" aria-label="Select crew station"></select><button id="next" aria-label="Next station">›</button></div><div id="heading"></div></section><nav id="nav"></nav><div id="view"></div></div></div><footer><small>Offline core · navigation links need connectivity · welfare before pace</small></footer></main><script src="./race-data.js"></script><script>
-const APP_VERSION = '1.7';
+<div id="crew-area"><div class="row"><button id="homeButton" onclick="showPage('home')">Main menu</button><button onclick="showPage('race')">Race control</button></div><div id="prepView" hidden></div><div id="raceView"><section><div class="station-picker"><button id="prev" aria-label="Previous station">‹</button><select id="station" aria-label="Select crew station"></select><button id="next" aria-label="Next station">›</button></div><div id="heading"></div></section><nav id="nav"></nav><div id="view"></div></div></div><footer><small>Offline core · navigation links need connectivity · welfare before pace</small></footer></main><script src="./race-data.js"></script><script src="./race-course.js"></script><script>
+const APP_VERSION = '1.8';
 const data=window.RACE_DATA;
 const crew=data.checkpoints.filter(r=>r.type!=='Aid');
 const names=crew.map(r=>r.name), miles=crew.map(r=>r.mile), times=crew.map(r=>r.arrival32_min), stops=crew.map(r=>r.departure32_min-r.arrival32_min);
@@ -115,7 +119,28 @@ function showPage(page){
 }
 function updatePrep(page){const s=data.preparation.stages.find(x=>x.id===page),items=s.groups.flatMap(g=>g.items),done=items.filter(x=>stageState(page)[x.id]).length;$('prepCount').textContent=done+' of '+items.length+' complete · '+(items.length-done)+' outstanding';$('prepProgress').value=done;}
 function checkPrep(el){stageState(el.dataset.stage)[el.dataset.item]=el.checked;save();updatePrep(el.dataset.stage);}
-function exportLog(){let blob=new Blob([JSON.stringify({version:2,appVersion:APP_VERSION,dataVersion:data.version,previousSoutheaseLog:state.previousSoutheaseLog,stations:crew.map(r=>({id:r.checkpoint_id,name:r.name})),logs:state.logs,preparation:state.preparation,transport:state.transport},null,2)],{type:'application/json'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='Ben-race-log.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}function setupRunnerView(){
+function exportLog(){let blob=new Blob([JSON.stringify({version:2,appVersion:APP_VERSION,dataVersion:data.version,previousSoutheaseLog:state.previousSoutheaseLog,stations:crew.map(r=>({id:r.checkpoint_id,name:r.name})),logs:state.logs,preparation:state.preparation,transport:state.transport},null,2)],{type:'application/json'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='Ben-race-log.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}// Estimate progress along the race line. Prefer a manual checkpoint when nearby sections overlap.
+function matchRaceLocation(course, {latitude, longitude, accuracy}) {
+  if (!course || !Number.isFinite(accuracy) || accuracy > 100) return null;
+  const metresPerLongitude = 111195 * Math.cos(latitude * Math.PI / 180);
+  const candidates = [];
+  for (let i = 1; i < course.length; i++) {
+    const a = course[i - 1], b = course[i];
+    const x = (a[1] - longitude) * metresPerLongitude, y = (a[0] - latitude) * 111195;
+    const dx = (b[1] - a[1]) * metresPerLongitude, dy = (b[0] - a[0]) * 111195;
+    const lengthSquared = dx * dx + dy * dy;
+    if (!lengthSquared) continue;
+    const fraction = Math.max(0, Math.min(1, -(x * dx + y * dy) / lengthSquared));
+    candidates.push({distance: Math.hypot(x + fraction * dx, y + fraction * dy), mile: a[2] + fraction * (b[2] - a[2])});
+  }
+  candidates.sort((a,b) => a.distance - b.distance);
+  const best = candidates[0];
+  if (!best || best.distance > Math.max(45, accuracy)) return null;
+  const close = candidates.filter(candidate => candidate.distance <= best.distance + Math.max(20, accuracy));
+  if (close.some(candidate => Math.abs(candidate.mile - best.mile) > 0.4)) return null;
+  return best.mile;
+}
+function setupRunnerView(){
 const route = data.checkpoints.map(stop => ({
   id: stop.checkpoint_id, name: stop.name, mile: stop.mile, type: stop.type,
   planned: stop.planned_use === 'Yes', status: stop.crew_status
@@ -123,6 +148,9 @@ const route = data.checkpoints.map(stop => ({
 const selector = document.getElementById('checkpoint');
 const timeline = document.getElementById('timeline');
 const support = document.getElementById('support');
+const locationStatus = $('runner-location-status');
+const locateButton = $('locate-runner');
+let locationRequest = 0;
 const mile = value => value.toFixed(1);
 const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 function title(stop) {
@@ -130,14 +158,23 @@ function title(stop) {
 }
 function card(label, stop, from, tone) {
   return `<div class="card ${tone}"><strong class="${tone}-tone">${label}</strong>
-    ${stop ? `<span class="distance">${mile(stop.mile-from.mile)} mi</span><p>${escapeHtml(title(stop))}</p><small>Race mile ${mile(stop.mile)}</small>` : '<p>No further aid stations</p>'}</div>`;
+    ${stop ? `<span class="distance">${mile(Math.max(0, stop.mile-from.mile))} mi</span><p>${escapeHtml(title(stop))}</p><small>Race mile ${mile(stop.mile)}</small>` : '<p>No further aid stations</p>'}</div>`;
 }
 function render(index) {
+  locationRequest++;
+  locateButton.disabled = false;
+  locationStatus.textContent = '';
   selector.value = index;
   state.runnerCheckpoint = route[index].id;
   save();
   const from = route[index];
-  const remaining = route.slice(index+1);
+  showUpcoming(from, route.slice(index+1));
+  timeline.querySelectorAll('button').forEach((button,i) => {
+    if(i===index) button.setAttribute('aria-current','location');
+    else button.removeAttribute('aria-current');
+  });
+}
+function showUpcoming(from, remaining) {
   const nextCrew = remaining.find(stop => stop.type === 'Crew' && stop.planned);
   const finish = remaining.find(stop => stop.type === 'Finish');
   const nextAid = remaining.find(stop => stop.type === 'Aid');
@@ -145,12 +182,48 @@ function render(index) {
   const beforeDestination = remaining.filter(stop => stop.type === 'Aid' && stop.mile < (destination?.mile ?? 0));
   support.innerHTML = destination ? `<div class="cards">${card('A · Next aid station', nextAid, from, 'aid')}${card(nextCrew?'C · Next crew stop':'Race finish', destination, from, 'crew')}</div>
     ${beforeDestination.length ? `<div class="support"><strong>${beforeDestination.length} aid ${beforeDestination.length===1?'station':'stations'} before ${nextCrew?'you see the crew':'the finish'}</strong><p>${beforeDestination.map(stop=>escapeHtml(stop.name)).join(' → ')}</p></div>` : ''}` : '<div class="card">Finish · Plumpton Racecourse</div>';
-  timeline.querySelectorAll('button').forEach((button,i) => {
-    if(i===index) button.setAttribute('aria-current','location');
-    else button.removeAttribute('aria-current');
-  });
 }
-selector.innerHTML = route.map((stop,i)=>`<option value="${i}">Mile ${mile(stop.mile)} · ${escapeHtml(title(stop))}</option>`).join('');
+const crewPlan = route.filter(stop => stop.type === 'Start' || stop.type === 'Finish' || (stop.type === 'Crew' && stop.planned));
+$('crew-legs').innerHTML = crewPlan.slice(1).map((to, index) => {
+  const from = crewPlan[index];
+  const intervening = route.filter(stop => stop.type === 'Aid' && from.mile < stop.mile && stop.mile < to.mile);
+  const names = intervening.length ? intervening.map(stop => escapeHtml(stop.name)).join(' · ') : 'No aid stations in between';
+  return `<div class="line"><strong class="leg-distance">${mile(to.mile-from.mile)} mi</strong>${escapeHtml(title(from))} → ${escapeHtml(title(to))}<small>${names}</small></div>`;
+}).join('');
+locateButton.onclick = () => {
+  if (!navigator.geolocation || !window.RACE_COURSE) {
+    locationStatus.textContent = 'Location unavailable. Pick a checkpoint below.';
+    return;
+  }
+  const request = ++locationRequest;
+  locateButton.disabled = true;
+  locationStatus.textContent = 'Finding your position on the course…';
+  const complete = () => {
+    if (request !== locationRequest) return false;
+    locateButton.disabled = false;
+    return true;
+  };
+  navigator.geolocation.getCurrentPosition(position => {
+    if (!complete()) return;
+    const estimatedMile = matchRaceLocation(window.RACE_COURSE, position.coords);
+    if (estimatedMile === null) {
+      locationStatus.textContent = 'Unable to identify a single section of the route. Pick a checkpoint or try again.';
+      return;
+    }
+    const nearbyStop = route.find(stop => Math.abs(stop.mile - estimatedMile) <= 0.2);
+    if (nearbyStop) {
+      locationStatus.textContent = `You appear to be near ${title(nearbyStop)}. Pick a checkpoint if you’ve already passed it.`;
+    } else {
+      locationStatus.textContent = `Estimated position · race mile ${mile(estimatedMile)}. Along-course distances are approximate.`;
+    }
+    selector.value = '';
+    timeline.querySelectorAll('[aria-current]').forEach(button => button.removeAttribute('aria-current'));
+    showUpcoming({mile:estimatedMile}, route.filter(stop => stop.mile >= estimatedMile - 0.2));
+  }, () => {
+    if (complete()) locationStatus.textContent = 'Couldn’t get a location fix. Pick a checkpoint below or try again.';
+  }, {enableHighAccuracy:true, maximumAge:0, timeout:12000});
+};
+selector.innerHTML = '<option value="" disabled>Using estimated location</option>' + route.map((stop,i)=>`<option value="${i}">Mile ${mile(stop.mile)} · ${escapeHtml(title(stop))}</option>`).join('');
 timeline.innerHTML = route.map((stop,i) => {
   const isAid = stop.type==='Aid';
   const kind = isAid?'A':stop.type==='Crew'?'C':'';
