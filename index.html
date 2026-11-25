@@ -1,6 +1,38 @@
 <!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101c2b"><title>Ben – Race Control</title><style>
-*{box-sizing:border-box}body{margin:0;background:#101c2b;color:#f1f5f9;font:16px/1.5 system-ui,sans-serif}main{max-width:650px;margin:auto;padding:18px 16px 90px}h1{font-size:28px;margin:0}h2{font-size:24px;margin:4px 0}h3{font-size:19px;margin:4px 0}p{margin:8px 0}.muted,small{color:#aabbd0}.teal{color:#5eead4}.amber{color:#fcd34d}section{background:#19283a;border:1px solid #34465a;border-radius:14px;padding:16px;margin:12px 0}button,select,input{font:inherit;color:inherit;background:#24384d;border:1px solid #52677d;border-radius:9px;padding:12px;min-height:46px}button{cursor:pointer}button.active{background:#5eead4;color:#10232e;font-weight:700}select{width:100%}a{color:#5eead4}nav,.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}nav button{flex:1;padding:10px 6px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}.metric{font-size:24px;font-weight:700;display:block}.line{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #34465a;padding:10px 0}label.check{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #34465a}input[type=checkbox]{width:24px;height:24px;min-height:0;accent-color:#5eead4}input[type=datetime-local],textarea{width:100%;margin:5px 0 10px}textarea{background:#101c2b;color:white;border:1px solid #52677d;border-radius:8px;padding:12px;font:inherit}progress{width:100%;accent-color:#5eead4}footer{position:sticky;bottom:0;background:#101c2b;padding:10px 0}.warning{border-left:3px solid #fcd34d;padding-left:10px}table{width:100%;border-collapse:collapse;font-size:14px}td,th{text-align:left;padding:9px 4px;border-bottom:1px solid #34465a}tr[data-i]{cursor:pointer} .danger{color:#fda4af}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #fcd34d}html{max-width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}body{font-size:15px;line-height:1.4}main{width:100%;padding:12px 12px 24px}header h1{font-size:23px}header .warning{font-size:12px;margin:5px 0}section{padding:12px;margin:10px 0;min-width:0}h2{font-size:21px;overflow-wrap:anywhere}h3{font-size:17px}small{font-size:12px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.grid>div{min-width:0}.metric{font-size:20px;line-height:1.2;overflow-wrap:anywhere}input,select,textarea{min-width:0;max-width:100%;font-size:16px}nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}nav button{font-size:13px;min-width:0;padding:8px 3px}footer{position:static;font-size:12px}footer small{font-size:11px}.row>button{flex:1;min-width:0;font-size:14px}table{table-layout:fixed;font-size:12px}td,th{overflow-wrap:anywhere}th:first-child{width:39%}details summary{cursor:pointer;color:#5eead4;padding:10px 0;font-weight:600}#heading p{margin:4px 0}#heading a{display:inline-block;padding:8px 0;overflow-wrap:anywhere}.hero{border-color:#5eead4}.hero .metric{font-size:26px}.hero h2{margin-bottom:10px}@media(max-width:350px){.grid{grid-template-columns:1fr}.hero .metric{font-size:23px}} html{font-size:16px}body{font:14px/1.35 system-ui,sans-serif}main{padding:8px;max-width:540px}header{margin-bottom:8px}header h1{font-size:18px}header .warning{font-size:11px}header #storage{display:none}section{padding:10px;margin:8px 0;border-radius:10px}#station{font-size:14px;padding:8px;min-height:44px}#prev,#next{flex:0 0 48px;font-size:20px;padding:4px;min-height:44px} .station-picker{display:grid;grid-template-columns:48px minmax(0,1fr) 48px;gap:6px;align-items:center}#heading h2{font-size:20px;margin:8px 0 2px}#heading progress{height:8px}nav{grid-template-columns:repeat(2,minmax(0,1fr))}nav button{white-space:normal;overflow-wrap:anywhere;font-size:12px;min-height:44px}.metric{font-size:18px}.hero .metric{font-size:21px}small{font-size:11px}h2{font-size:19px}button:disabled{opacity:.4} @media(max-width:300px){.grid{grid-template-columns:1fr}nav{grid-template-columns:repeat(2,minmax(0,1fr))}.station-picker{grid-template-columns:40px minmax(0,1fr) 40px}#prev,#next{width:40px}} </style><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg"></head><body><main><header><small class="teal">WINTER ON THE DOWNS · 5–6 DEC 2026</small><h1>Ben – Race Control</h1><p class="warning amber">App version 1.6 · Spreadsheet snapshot · provisional</p><small id="storage"></small></header><div class="row"><button id="homeButton" onclick="showPage('home')">Main menu</button><button onclick="showPage('race')">Race control</button></div><div id="prepView" hidden></div><div id="raceView"><section><div class="station-picker"><button id="prev" aria-label="Previous station">‹</button><select id="station" aria-label="Select crew station"></select><button id="next" aria-label="Next station">›</button></div><div id="heading"></div></section><nav id="nav"></nav><div id="view"></div></div><footer><small>Offline core · navigation links need connectivity · welfare before pace</small></footer></main><script src="./race-data.js"></script><script>
-const APP_VERSION = '1.6';
+*{box-sizing:border-box}body{margin:0;background:#101c2b;color:#f1f5f9;font:16px/1.5 system-ui,sans-serif}main{max-width:650px;margin:auto;padding:18px 16px 90px}h1{font-size:28px;margin:0}h2{font-size:24px;margin:4px 0}h3{font-size:19px;margin:4px 0}p{margin:8px 0}.muted,small{color:#aabbd0}.teal{color:#5eead4}.amber{color:#fcd34d}section{background:#19283a;border:1px solid #34465a;border-radius:14px;padding:16px;margin:12px 0}button,select,input{font:inherit;color:inherit;background:#24384d;border:1px solid #52677d;border-radius:9px;padding:12px;min-height:46px}button{cursor:pointer}button.active{background:#5eead4;color:#10232e;font-weight:700}select{width:100%}a{color:#5eead4}nav,.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}nav button{flex:1;padding:10px 6px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}.metric{font-size:24px;font-weight:700;display:block}.line{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #34465a;padding:10px 0}label.check{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #34465a}input[type=checkbox]{width:24px;height:24px;min-height:0;accent-color:#5eead4}input[type=datetime-local],textarea{width:100%;margin:5px 0 10px}textarea{background:#101c2b;color:white;border:1px solid #52677d;border-radius:8px;padding:12px;font:inherit}progress{width:100%;accent-color:#5eead4}footer{position:sticky;bottom:0;background:#101c2b;padding:10px 0}.warning{border-left:3px solid #fcd34d;padding-left:10px}table{width:100%;border-collapse:collapse;font-size:14px}td,th{text-align:left;padding:9px 4px;border-bottom:1px solid #34465a}tr[data-i]{cursor:pointer} .danger{color:#fda4af}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #fcd34d}html{max-width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}body{font-size:15px;line-height:1.4}main{width:100%;padding:12px 12px 24px}header h1{font-size:23px}header .warning{font-size:12px;margin:5px 0}section{padding:12px;margin:10px 0;min-width:0}h2{font-size:21px;overflow-wrap:anywhere}h3{font-size:17px}small{font-size:12px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.grid>div{min-width:0}.metric{font-size:20px;line-height:1.2;overflow-wrap:anywhere}input,select,textarea{min-width:0;max-width:100%;font-size:16px}nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}nav button{font-size:13px;min-width:0;padding:8px 3px}footer{position:static;font-size:12px}footer small{font-size:11px}.row>button{flex:1;min-width:0;font-size:14px}table{table-layout:fixed;font-size:12px}td,th{overflow-wrap:anywhere}th:first-child{width:39%}details summary{cursor:pointer;color:#5eead4;padding:10px 0;font-weight:600}#heading p{margin:4px 0}#heading a{display:inline-block;padding:8px 0;overflow-wrap:anywhere}.hero{border-color:#5eead4}.hero .metric{font-size:26px}.hero h2{margin-bottom:10px}@media(max-width:350px){.grid{grid-template-columns:1fr}.hero .metric{font-size:23px}} html{font-size:16px}body{font:14px/1.35 system-ui,sans-serif}main{padding:8px;max-width:540px}header{margin-bottom:8px}header h1{font-size:18px}header .warning{font-size:11px}header #storage{display:none}section{padding:10px;margin:8px 0;border-radius:10px}#station{font-size:14px;padding:8px;min-height:44px}#prev,#next{flex:0 0 48px;font-size:20px;padding:4px;min-height:44px} .station-picker{display:grid;grid-template-columns:48px minmax(0,1fr) 48px;gap:6px;align-items:center}#heading h2{font-size:20px;margin:8px 0 2px}#heading progress{height:8px}nav{grid-template-columns:repeat(2,minmax(0,1fr))}nav button{white-space:normal;overflow-wrap:anywhere;font-size:12px;min-height:44px}.metric{font-size:18px}.hero .metric{font-size:21px}small{font-size:11px}h2{font-size:19px}button:disabled{opacity:.4} @media(max-width:300px){.grid{grid-template-columns:1fr}nav{grid-template-columns:repeat(2,minmax(0,1fr))}.station-picker{grid-template-columns:40px minmax(0,1fr) 40px}#prev,#next{width:40px}} #runner-area .cards { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+#runner-area .card { border: 1px solid #355365; border-radius: 13px; background: #142432; padding: 12px; }
+#runner-area .card.aid { border-top: 3px solid #8fc7ff; }
+#runner-area .card.crew { border-top: 3px solid #64e9c6; }
+#runner-area .aid-tone { color: #a4d2ff; }
+#runner-area .crew-tone { color: #70eaca; }
+#runner-area .distance { display: block; font-size: 26px; font-weight: 760; margin: 3px 0; letter-spacing: -.04em; }
+#runner-area .support { background: #14312f; border: 1px solid #2e5b50; padding: 11px 12px; border-radius: 10px; margin-top: 10px; }
+#runner-area .support p { margin-top: 3px; }
+#runner-area .timeline { list-style: none; padding: 0; margin: 8px 0; border: 1px solid #30465a; border-radius: 12px; overflow: hidden; }
+#runner-area .timeline li + li { border-top: 1px solid #2a3d50; }
+#runner-area .timeline button { width: 100%; min-height: 47px; display: grid; grid-template-columns: 46px 23px 1fr 57px; align-items: center; gap: 7px; text-align: left; font: inherit; color: inherit; padding: 7px 10px; background: #13212f; border: 0; cursor: pointer; }
+#runner-area .timeline [aria-current="location"] { background: #1d3e43; }
+#runner-area .timeline .delta { text-align: right; color: #adbed0; font-size: 11px; white-space: nowrap; }
+#runner-area .mile { font-variant-numeric: tabular-nums; font-weight: 650; }
+#runner-area .timeline strong { font-size: 13px; }
+#runner-area .timeline .status { display: block; color: #c4d3e1; }
+.role-switch button{flex:1}.role-switch{margin:12px 0}#runner-area h2{margin:18px 0 8px}#runner-area label{display:block;margin-bottom:5px}#runner-area p{margin:3px 0}#runner-area .timeline button{border-radius:0}#runner-area .card .distance{line-height:1.2}#runner-area .timeline button:focus-visible{outline-offset:-3px}
+</style><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg"></head><body><main><header><small class="teal">WINTER ON THE DOWNS · 5–6 DEC 2026</small><h1>Ben – Race Control</h1><p class="warning amber">App version 1.7 · Spreadsheet snapshot · provisional</p><small id="storage"></small></header><div class="row role-switch" role="group" aria-label="Select role">
+<button id="role-crew" type="button" aria-pressed="true">Crew</button>
+<button id="role-runner" type="button" aria-pressed="false">Runner</button>
+</div>
+<div id="runner-area" hidden>
+<h2>Ben’s race plan</h2>
+<label for="checkpoint">Preview from a checkpoint</label>
+<select id="checkpoint"></select>
+<h2>What’s next</h2>
+<div id="support" aria-live="polite"></div>
+<h2>Full race timeline</h2>
+<p class="muted">Tap a stop to see what follows. The right column shows miles from the previous stop.</p>
+<ol class="timeline" id="timeline"></ol>
+</div>
+<div id="crew-area"><div class="row"><button id="homeButton" onclick="showPage('home')">Main menu</button><button onclick="showPage('race')">Race control</button></div><div id="prepView" hidden></div><div id="raceView"><section><div class="station-picker"><button id="prev" aria-label="Previous station">‹</button><select id="station" aria-label="Select crew station"></select><button id="next" aria-label="Next station">›</button></div><div id="heading"></div></section><nav id="nav"></nav><div id="view"></div></div></div><footer><small>Offline core · navigation links need connectivity · welfare before pace</small></footer></main><script src="./race-data.js"></script><script>
+const APP_VERSION = '1.7';
 const data=window.RACE_DATA;
 const crew=data.checkpoints.filter(r=>r.type!=='Aid');
 const names=crew.map(r=>r.name), miles=crew.map(r=>r.mile), times=crew.map(r=>r.arrival32_min), stops=crew.map(r=>r.departure32_min-r.arrival32_min);
@@ -83,4 +115,78 @@ function showPage(page){
 }
 function updatePrep(page){const s=data.preparation.stages.find(x=>x.id===page),items=s.groups.flatMap(g=>g.items),done=items.filter(x=>stageState(page)[x.id]).length;$('prepCount').textContent=done+' of '+items.length+' complete · '+(items.length-done)+' outstanding';$('prepProgress').value=done;}
 function checkPrep(el){stageState(el.dataset.stage)[el.dataset.item]=el.checked;save();updatePrep(el.dataset.stage);}
-function exportLog(){let blob=new Blob([JSON.stringify({version:2,appVersion:APP_VERSION,dataVersion:data.version,previousSoutheaseLog:state.previousSoutheaseLog,stations:crew.map(r=>({id:r.checkpoint_id,name:r.name})),logs:state.logs,preparation:state.preparation,transport:state.transport},null,2)],{type:'application/json'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='Ben-race-log.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}render();showPage('home');</script><script>if("serviceWorker" in navigator){navigator.serviceWorker.register("./sw.js").catch(console.warn)}</script></body></html>
+function exportLog(){let blob=new Blob([JSON.stringify({version:2,appVersion:APP_VERSION,dataVersion:data.version,previousSoutheaseLog:state.previousSoutheaseLog,stations:crew.map(r=>({id:r.checkpoint_id,name:r.name})),logs:state.logs,preparation:state.preparation,transport:state.transport},null,2)],{type:'application/json'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='Ben-race-log.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}function setupRunnerView(){
+const route = data.checkpoints.map(stop => ({
+  id: stop.checkpoint_id, name: stop.name, mile: stop.mile, type: stop.type,
+  planned: stop.planned_use === 'Yes', status: stop.crew_status
+}));
+const selector = document.getElementById('checkpoint');
+const timeline = document.getElementById('timeline');
+const support = document.getElementById('support');
+const mile = value => value.toFixed(1);
+const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+function title(stop) {
+  return stop.type === 'Crew' ? 'Crew ' + stop.id.slice(-2) + ' · ' + stop.name : stop.name;
+}
+function card(label, stop, from, tone) {
+  return `<div class="card ${tone}"><strong class="${tone}-tone">${label}</strong>
+    ${stop ? `<span class="distance">${mile(stop.mile-from.mile)} mi</span><p>${escapeHtml(title(stop))}</p><small>Race mile ${mile(stop.mile)}</small>` : '<p>No further aid stations</p>'}</div>`;
+}
+function render(index) {
+  selector.value = index;
+  state.runnerCheckpoint = route[index].id;
+  save();
+  const from = route[index];
+  const remaining = route.slice(index+1);
+  const nextCrew = remaining.find(stop => stop.type === 'Crew' && stop.planned);
+  const finish = remaining.find(stop => stop.type === 'Finish');
+  const nextAid = remaining.find(stop => stop.type === 'Aid');
+  const destination = nextCrew ?? finish;
+  const beforeDestination = remaining.filter(stop => stop.type === 'Aid' && stop.mile < (destination?.mile ?? 0));
+  support.innerHTML = destination ? `<div class="cards">${card('A · Next aid station', nextAid, from, 'aid')}${card(nextCrew?'C · Next crew stop':'Race finish', destination, from, 'crew')}</div>
+    ${beforeDestination.length ? `<div class="support"><strong>${beforeDestination.length} aid ${beforeDestination.length===1?'station':'stations'} before ${nextCrew?'you see the crew':'the finish'}</strong><p>${beforeDestination.map(stop=>escapeHtml(stop.name)).join(' → ')}</p></div>` : ''}` : '<div class="card">Finish · Plumpton Racecourse</div>';
+  timeline.querySelectorAll('button').forEach((button,i) => {
+    if(i===index) button.setAttribute('aria-current','location');
+    else button.removeAttribute('aria-current');
+  });
+}
+selector.innerHTML = route.map((stop,i)=>`<option value="${i}">Mile ${mile(stop.mile)} · ${escapeHtml(title(stop))}</option>`).join('');
+timeline.innerHTML = route.map((stop,i) => {
+  const isAid = stop.type==='Aid';
+  const kind = isAid?'A':stop.type==='Crew'?'C':'';
+  return `<li><button type="button" data-index="${i}"><span class="mile">${mile(stop.mile)}</span><span class="${isAid?'aid':'crew'}-tone">${kind}</span>
+  <span><strong>${escapeHtml(title(stop))}</strong>${stop.type==='Crew'&&!stop.planned?`<small class="status">${escapeHtml(stop.status)}</small>`:''}</span>
+  <span class="delta">${i?'+'+mile(stop.mile-route[i-1].mile)+' mi':''}</span></button></li>`;
+}).join('');
+selector.onchange = () => render(Number(selector.value));
+timeline.onclick = event => {
+  const button = event.target.closest('button');
+  if (button) {
+    render(Number(button.dataset.index));
+    support.scrollIntoView({block:'center'});
+  }
+};
+render(Math.max(0, route.findIndex(stop => stop.id === state.runnerCheckpoint)));
+}
+let runnerInitialised = false;
+function selectRole(role){
+  const runner = role === 'runner';
+  state.role = runner ? 'runner' : 'crew';
+  $('runner-area').hidden = !runner;
+  $('crew-area').hidden = runner;
+  $('role-runner').setAttribute('aria-pressed', String(runner));
+  $('role-crew').setAttribute('aria-pressed', String(!runner));
+  $('role-runner').classList.toggle('active',runner);
+  $('role-crew').classList.toggle('active',!runner);
+  if(runner && !runnerInitialised){
+    setupRunnerView();
+    runnerInitialised = true;
+  }
+  save();
+}
+$('role-crew').onclick = () => selectRole('crew');
+$('role-runner').onclick = () => selectRole('runner');
+render();
+showPage('home');
+selectRole(state.role);
+</script><script>if("serviceWorker" in navigator){navigator.serviceWorker.register("./sw.js").catch(console.warn)}</script></body></html>
