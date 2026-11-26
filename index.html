@@ -17,7 +17,7 @@
 #runner-area .timeline strong { font-size: 13px; }
 #runner-area .timeline .status { display: block; color: #c4d3e1; }
 .role-switch button{flex:1}.role-switch{margin:12px 0}#runner-area h2{margin:18px 0 8px}#runner-area label{display:block;margin-bottom:5px}#runner-area p{margin:3px 0}#runner-area .timeline button{border-radius:0}#runner-area .card .distance{line-height:1.2}#runner-area .timeline button:focus-visible{outline-offset:-3px}
-#locate-runner{width:100%;background:#5eead4;color:#10232e;font-weight:700}#runner-location-status{min-height:24px}#crew-legs .line{display:block}#crew-legs .line small{display:block;margin-top:3px}#crew-legs .leg-distance{float:right;margin-left:8px}</style><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg"></head><body><main><header><small class="teal">WINTER ON THE DOWNS · 5–6 DEC 2026</small><h1>Ben – Race Control</h1><p class="warning amber">App version 1.9 · Spreadsheet snapshot · provisional</p><small id="storage"></small></header><div class="row role-switch" role="group" aria-label="Select role">
+#locate-runner{width:100%;background:#5eead4;color:#10232e;font-weight:700}#runner-location-status{min-height:24px}#crew-legs .line{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 10px}#crew-legs .line small{display:block;margin-top:3px}#crew-legs .leg-distance{white-space:nowrap;text-align:right;align-self:start}</style><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg"></head><body><main><header><small class="teal">WINTER ON THE DOWNS · 5–6 DEC 2026</small><h1>Ben – Race Control</h1><p class="warning amber">App version 1.10 · Spreadsheet snapshot · provisional</p><small id="storage"></small></header><div class="row role-switch" role="group" aria-label="Select role">
 <button id="role-crew" type="button" aria-pressed="true">Crew</button>
 <button id="role-runner" type="button" aria-pressed="false">Runner</button>
 </div>
@@ -31,13 +31,14 @@
 <h2>What’s next</h2>
 <div id="support" aria-live="polite"></div>
 <h2>Between crew meet-ups</h2>
+<p class="muted">Each distance is from the first checkpoint in that row to the second.</p>
 <div id="crew-legs"></div>
 <h2>Full race timeline</h2>
 <p class="muted">Tap a stop to see what follows. The right column shows miles from the previous stop.</p>
 <ol class="timeline" id="timeline"></ol>
 </div>
 <div id="crew-area"><div class="row"><button id="homeButton" onclick="showPage('home')">Main menu</button><button onclick="showPage('race')">Race control</button></div><div id="prepView" hidden></div><div id="raceView"><section><div class="station-picker"><button id="prev" aria-label="Previous station">‹</button><select id="station" aria-label="Select crew station"></select><button id="next" aria-label="Next station">›</button></div><div id="heading"></div></section><nav id="nav"></nav><div id="view"></div></div></div><footer><small>Offline core · navigation links need connectivity · welfare before pace</small></footer></main><script src="./race-data.js"></script><script src="./race-course.js"></script><script>
-const APP_VERSION = '1.9';
+const APP_VERSION = '1.10';
 const data=window.RACE_DATA;
 const crew=data.checkpoints.filter(r=>r.type!=='Aid');
 const names=crew.map(r=>r.name), miles=crew.map(r=>r.mile), times=crew.map(r=>r.arrival32_min), stops=crew.map(r=>r.departure32_min-r.arrival32_min);
@@ -142,7 +143,7 @@ function matchRaceLocation(course, {latitude, longitude, accuracy}) {
   return best.mile;
 }
 function setupRunnerView(){
-const route = data.checkpoints.map(stop => ({
+const route = [...data.checkpoints].sort((a,b) => a.mile-b.mile).map(stop => ({
   id: stop.checkpoint_id, name: stop.name, mile: stop.mile, type: stop.type,
   planned: stop.planned_use === 'Yes', status: stop.crew_status
 }));
@@ -191,7 +192,7 @@ $('crew-legs').innerHTML = crewPlan.slice(1).map((to, index) => {
   const from = crewPlan[index];
   const intervening = route.filter(stop => stop.type === 'Aid' && from.mile < stop.mile && stop.mile < to.mile);
   const names = intervening.length ? intervening.map(stop => escapeHtml(stop.name)).join(' · ') : 'No aid stations in between';
-  return `<div class="line"><strong class="leg-distance">${mile(to.mile-from.mile)} mi</strong>${escapeHtml(title(from))} → ${escapeHtml(title(to))}<small>${names}</small></div>`;
+  return `<div class="line"><div>From ${escapeHtml(title(from))}<br>To ${escapeHtml(title(to))}<small>${names}</small></div><strong class="leg-distance">${mile(to.mile-from.mile)} mi</strong></div>`;
 }).join('');
 locateButton.onclick = () => {
   phoneLocation.hidden = true;
