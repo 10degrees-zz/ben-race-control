@@ -17,7 +17,7 @@
 #runner-area .timeline strong { font-size: 13px; }
 #runner-area .timeline .status { display: block; color: #c4d3e1; }
 .role-switch button{flex:1}.role-switch{margin:12px 0}#runner-area h2{margin:18px 0 8px}#runner-area label{display:block;margin-bottom:5px}#runner-area p{margin:3px 0}#runner-area .timeline button{border-radius:0}#runner-area .card .distance{line-height:1.2}#runner-area .timeline button:focus-visible{outline-offset:-3px}
-#locate-runner{width:100%;background:#5eead4;color:#10232e;font-weight:700}#runner-location-status{min-height:24px}#crew-legs .line{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 10px}#crew-legs .line small{display:block;margin-top:3px}#crew-legs .leg-distance{white-space:nowrap;text-align:right;align-self:start}</style><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg"></head><body><main><header><small class="teal">WINTER ON THE DOWNS · 5–6 DEC 2026</small><h1>Ben – Race Control</h1><p class="warning amber">App version 1.10 · Spreadsheet snapshot · provisional</p><small id="storage"></small></header><div class="row role-switch" role="group" aria-label="Select role">
+#locate-runner{width:100%;background:#5eead4;color:#10232e;font-weight:700}#runner-location-status{min-height:24px}#crew-legs .line{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 10px}#crew-legs .line small{display:block;margin-top:3px}#crew-legs .leg-distance{white-space:nowrap;text-align:right;align-self:start}.crew-countdown{border-top:3px solid #5eead4}.countdown-value{font-size:1.55rem;font-weight:750;color:#5eead4}.crew-allowances{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:12px;font-size:.85rem}.crew-allowances input{width:100%;margin:4px 0;padding:6px}</style><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg"></head><body><main><header><small class="teal">WINTER ON THE DOWNS · 5–6 DEC 2026</small><h1>Ben – Race Control</h1><p class="warning amber">App version 1.11 · Spreadsheet snapshot · provisional</p><small id="storage"></small></header><div class="row role-switch" role="group" aria-label="Select role">
 <button id="role-crew" type="button" aria-pressed="true">Crew</button>
 <button id="role-runner" type="button" aria-pressed="false">Runner</button>
 </div>
@@ -38,8 +38,16 @@
 <ol class="timeline" id="timeline"></ol>
 </div>
 <div id="crew-area"><div class="row"><button id="homeButton" onclick="showPage('home')">Main menu</button><button onclick="showPage('race')">Race control</button></div><div id="prepView" hidden></div><div id="raceView"><section><div class="station-picker"><button id="prev" aria-label="Previous station">‹</button><select id="station" aria-label="Select crew station"></select><button id="next" aria-label="Next station">›</button></div><div id="heading"></div></section><nav id="nav"></nav><div id="view"></div></div></div><footer><small>Offline core · navigation links need connectivity · welfare before pace</small></footer></main><script src="./race-data.js"></script><script src="./race-course.js"></script><script>
-const APP_VERSION = '1.10';
+const APP_VERSION = '1.11';
 const data=window.RACE_DATA;
+const driveLegs = [{"from":"start","to":"crew-01","miles":6.7,"estimate":16,"drive":null,"setup":null,"url":"https://www.google.com/maps/dir/?api=1&origin=50.924471%2C-0.062567&destination=50.87494764064522%2C0.017498441503114987&travelmode=driving"},{"from":"crew-01","to":"crew-02","miles":13.7,"estimate":24,"drive":null,"setup":null,"url":"https://www.google.com/maps/dir/?api=1&origin=50.87494764064522%2C0.017498441503114987&destination=50.793567%2C0.240117&travelmode=driving"},{"from":"crew-02","to":"crew-03","miles":5.4,"estimate":12,"drive":null,"setup":null,"url":"https://www.google.com/maps/dir/?api=1&origin=50.793567%2C0.240117&destination=50.7587608%2C0.2067612&travelmode=driving"},{"from":"crew-03","to":"crew-04","miles":2.9,"estimate":4,"drive":null,"setup":null,"url":"https://www.google.com/maps/dir/?api=1&origin=50.7587608%2C0.2067612&destination=50.7753706%2C0.1542627&travelmode=driving"},{"from":"crew-04","to":"crew-05","miles":7.1,"estimate":18,"drive":null,"setup":null,"url":"https://www.google.com/maps/dir/?api=1&origin=50.7753706%2C0.1542627&destination=50.825774%2C0.119258&travelmode=driving"},{"from":"crew-05","to":"crew-06","miles":5.9,"estimate":20,"drive":null,"setup":null,"url":"https://www.google.com/maps/dir/?api=1&origin=50.825774%2C0.119258&destination=50.833589%2C0.08344&travelmode=driving"},{"from":"crew-06","to":"crew-07","miles":12.6,"estimate":19,"drive":null,"setup":null,"url":"https://www.google.com/maps/dir/?api=1&origin=50.833589%2C0.08344&destination=50.87025%2C-0.15196&travelmode=driving"},{"from":"crew-07","to":"crew-08","miles":3.9,"estimate":7,"drive":null,"setup":null,"url":"https://www.google.com/maps/dir/?api=1&origin=50.87025%2C-0.15196&destination=50.888247%2C-0.194252&travelmode=driving"},{"from":"crew-08","to":"crew-09","miles":11.5,"estimate":23,"drive":null,"setup":null,"url":"https://www.google.com/maps/dir/?api=1&origin=50.888247%2C-0.194252&destination=50.873962%2C-0.284551&travelmode=driving"},{"from":"crew-09","to":"crew-10","miles":5.3,"estimate":14,"drive":null,"setup":null,"url":"https://www.google.com/maps/dir/?api=1&origin=50.873962%2C-0.284551&destination=50.871887%2C-0.299423&travelmode=driving"},{"from":"crew-10","to":"crew-11","miles":10.6,"estimate":17,"drive":null,"setup":null,"url":"https://www.google.com/maps/dir/?api=1&origin=50.871887%2C-0.299423&destination=50.864934%2C-0.382457&travelmode=driving"},{"from":"crew-11","to":"crew-12","miles":9.9,"estimate":17,"drive":null,"setup":null,"url":"https://www.google.com/maps/dir/?api=1&origin=50.864934%2C-0.382457&destination=50.883126%2C-0.311944&travelmode=driving"},{"from":"crew-12","to":"crew-13","miles":11.6,"estimate":21,"drive":null,"setup":null,"url":"https://www.google.com/maps/dir/?api=1&origin=50.883126%2C-0.311944&destination=50.885444%2C-0.212286&travelmode=driving"},{"from":"crew-13","to":"crew-14","miles":5.6,"estimate":15,"drive":null,"setup":null,"url":"https://www.google.com/maps/dir/?api=1&origin=50.885444%2C-0.212286&destination=50.905495%2C-0.148269&travelmode=driving"},{"from":"crew-14","to":"crew-15","miles":4.4,"estimate":9,"drive":null,"setup":null,"url":"https://www.google.com/maps/dir/?api=1&origin=50.905495%2C-0.148269&destination=50.901021%2C-0.104979&travelmode=driving"},{"from":"crew-15","to":"finish","miles":6.7,"estimate":17,"drive":null,"setup":null,"url":"https://www.google.com/maps/dir/?api=1&origin=50.901021%2C-0.104979&destination=50.924471%2C-0.062567&travelmode=driving"}];
+for (const stop of data.checkpoints) {
+  if (['crew-10','crew-12'].includes(stop.checkpoint_id)) stop.planned_use = 'Yes';
+  if (stop.checkpoint_id === 'crew-07') {
+    stop.parking = 'Car park at the crew pin.';
+    stop.parking_url = 'https://www.google.com/maps/dir/?api=1&destination=50.87025%2C-0.15196&travelmode=driving';
+  }
+}
 const crew=data.checkpoints.filter(r=>r.type!=='Aid');
 const names=crew.map(r=>r.name), miles=crew.map(r=>r.mile), times=crew.map(r=>r.arrival32_min), stops=crew.map(r=>r.departure32_min-r.arrival32_min);
 const pins=crew.map(r=>(r.what3words||'').replace(/^\/+/,''));
@@ -62,11 +70,12 @@ function save(){try{localStorage.setItem('ben-race-prototype-v1',JSON.stringify(
 let tab='Progress';const $=id=>document.getElementById(id);const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const fmt=n=>{if(!Number.isFinite(n))return 'To confirm';let d=Math.floor(n/1440),m=((n%1440)+1440)%1440;return ['Sat','Sun','Mon'][d]+' '+String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0')};const dur=n=>n<0?'−'+dur(-n):Math.floor(n/60)+'h '+n%60+'m';const dt=n=>{if(!Number.isFinite(n))return '';let d=new Date(Date.UTC(2026,11,5,0,n));return d.toISOString().slice(0,16)};const mins=s=>Math.round((Date.parse(s+'Z')-Date.UTC(2026,11,5))/60000);const metric=(label,val)=>`<div><small>${label}</small><span class="metric">${val}</span></div>`;
 function log(){const id=crew[state.i].checkpoint_id;return state.logs[id]??(state.logs[id]=state.logs[state.i]||{checks:{}})}function choose(i){state.i=Math.max(0,Math.min(last,i));save();render()}$('station').innerHTML=names.map((n,i)=>`<option value="${i}">${String(i).padStart(2,'0')} · ${esc(n)}</option>`).join('');$('station').onchange=e=>choose(+e.target.value);$('prev').onclick=()=>choose(state.i-1);$('next').onclick=()=>choose(state.i+1);
 function dest(title,n,m,t,dep,delay,cut){return `<section><small class="${cut!==undefined?'amber':'teal'}">${title}</small><h2>${esc(n)}</h2><div class="grid">${metric('From here',(m-miles[state.i]).toFixed(1)+' mi')}${metric('Race mile',m.toFixed(1)+' mi')}${metric('Planned journey',t===null||times[state.i]===null?'To confirm':dur(t-(times[state.i]+stops[state.i])))}${metric('Revised arrival',fmt(t===null?null:t+delay))}</div>${cut!==undefined?`<p class="amber">${cut===null?'No cut-off in working data':'Departure deadline: '+fmt(cut)}</p>`:''}</section>`}
-function render(){let i=state.i,l=log(),plan=crew[i].departure32_min,arrival=l.arrival?mins(l.arrival):times[i],dep=l.departure?mins(l.departure):arrival===null?null:arrival+stops[i],delay=dep===null||plan===null?0:dep-plan; $('station').value=i;$('prev').disabled=i===0;$('next').disabled=i===last;$('heading').innerHTML=stationHeader(i);$('nav').innerHTML=['Overview'].map(t=>`<button class="${tab===t?'active':''}" onclick="tab='${t}';render()">${t==='Progress'?'Crew station':t==='Handover'?'Food & drink':t==='Overview'?'Full race overview':t}</button>`).join('');let html='';if(tab==='Progress'){html=handoverSummary(i)+nextCrewSummary(i,dep,delay)+`<section><h2>Arrival and departure</h2><label>Actual arrival (GMT)<input id="arr" type="datetime-local" value="${esc(l.arrival||dt(times[i]))}"></label><label>Actual departure (GMT)<input id="dep" type="datetime-local" value="${esc(l.departure||dt(dep))}"></label><div class="row"><button onclick="record()">Apply actual times</button><button onclick="resetTimes()">Reset to plan</button></div><p class="${delay>0?'amber':'teal'}">${l.arrival||l.departure?'Recorded scenario':'Planning scenario'} · ${delay===0?'On plan':dur(Math.abs(delay))+(delay>0?' behind':' ahead')} at departure</p></section>`;if(i<last){let a=aids.find(a=>a[5]>crew[i].sequence);const next=nextCrewIndex(i);
+function render(){let i=state.i,l=log(),plan=crew[i].departure32_min,arrival=l.arrival?mins(l.arrival):times[i],dep=l.departure?mins(l.departure):arrival===null?null:arrival+stops[i],delay=dep===null||plan===null?0:dep-plan; $('station').value=i;$('prev').disabled=i===0;$('next').disabled=i===last;$('heading').innerHTML=stationHeader(i);$('nav').innerHTML=['Overview'].map(t=>`<button class="${tab===t?'active':''}" onclick="tab='${t}';render()">${t==='Progress'?'Crew station':t==='Handover'?'Food & drink':t==='Overview'?'Full race overview':t}</button>`).join('');let html='';if(tab==='Progress'){html=crewTimingCard(i)+handoverSummary(i)+nextCrewSummary(i,dep,delay)+`<section><h2>Arrival and departure</h2><label>Actual arrival (GMT)<input id="arr" type="datetime-local" value="${esc(l.arrival||dt(times[i]))}"></label><label>Actual departure (GMT)<input id="dep" type="datetime-local" value="${esc(l.departure||dt(dep))}"></label><div class="row"><button onclick="record()">Apply actual times</button><button onclick="resetTimes()">Reset to plan</button></div><p class="${delay>0?'amber':'teal'}">${l.arrival||l.departure?'Recorded scenario':'Planning scenario'} · ${delay===0?'On plan':dur(Math.abs(delay))+(delay>0?' behind':' ahead')} at departure</p></section>`;if(i<last){let a=aids.find(a=>a[5]>crew[i].sequence);const next=nextCrewIndex(i);
 if(a && a[5]<crew[last].sequence)html+=dest('A: Next aid station',a[1],a[0],a[2],dep,delay,a[3]);
 const between=aids.filter(entry=>entry[5]>crew[i].sequence && entry[5]<crew[next].sequence);
 if(between.length)html+=`<section><h3>Aid stations before ${next===last?'the finish':'the next crew stop'}</h3><ul>${between.map(entry=>`<li>${esc(entry[1])} · mile ${entry[0]}</li>`).join('')}</ul></section>`;let c=aids.find(a=>a[5]>crew[i].sequence&&a[3]!==null),finish=c[5]===crew[last].sequence,margin=30,aidStop=c[4],slack=c[2]===null||plan===null?null:c[3]-(c[2]+delay)-aidStop;html+=`<section><small class="amber">NEXT DEADLINE · ${esc(c[1])}</small><h2>${fmt(c[3])}</h2><div class="grid">${metric('Projected departure / finish',fmt(slack===null?null:c[2]+delay+aidStop))}${metric('Projected time spare',slack===null?"To confirm":dur(slack))}</div><p class="${slack<0?'danger':slack<margin?'amber':'teal'}">${slack===null?'Arrival projection to confirm':slack<0?'Projected missed cut-off':slack<margin?'Below 30-minute planning buffer':'Above 30-minute planning buffer'}</p><small>Projection shifts the existing schedule by departure delay; includes planned intervening stops. No recommendation to accelerate. Check cut-offs against the latest organiser briefing.</small></section>`}}else if(tab==='Handover'){html=`<section><small class="teal">${i===0?'START PACK':i===last?'FINISH BAG':'FOOD BAG '+String(i).padStart(2,'0')}</small><h2>${meals[i]}</h2>${food[i]?['Rice blocks','Soreen portions','Potato portions','Honey sandwich halves','Marmite sandwich halves','Gels'].map((n,j)=>`<div class="line"><span>${n}</span><strong>${food[i][j]}</strong></div>`).join(''):'<p>Warm drink, tolerated food, dry clothes and shoes.</p>'}<p>Refill 500 ml plain and 500 ml electrolyte flasks as needed.</p><small>Provisional allocations; offer according to tolerance. Beeding Hill and Botolphs are alternatives; transfer supplies if skipping either.</small></section>`}else if(tab==='Checklist'){html=`<section><h2>Handover checklist</h2><p>${tasks.filter((_,j)=>l.checks[j]).length} of ${tasks.length} checked</p>${tasks.map((t,j)=>`<label class="check"><input type="checkbox" ${l.checks[j]?'checked':''} onchange="log().checks[${j}]=this.checked;save();render()">${t}</label>`).join('')}<p class="amber">Confusion, collapse or serious deterioration: seek medical help; emergency 999.</p></section>`}else if(tab==='Overview'){let rows=[...names.map((n,j)=>({n,m:miles[j],t:times[j],i:j})),...aids.slice(0,-1).map(a=>({n:a[1],m:a[0],t:a[2],cut:a[3]}))].sort((a,b)=>a.m-b.m);html=`<section><h2>Full race schedule</h2><p><small>Spreadsheet snapshot ${esc(data.version)} · ${esc(data.status)}</small></p><small>Tap a crew row to select it. Aid stations are runner-only. All times GMT.</small><table><thead><tr><th>Station</th><th>Mile</th><th>Plan</th><th>Cut-off</th></tr></thead><tbody>${rows.map(r=>`<tr ${r.i!==undefined?`data-i="${r.i}" onclick="choose(${r.i});tab='Progress';render()"`:''}><td class="${r.i!==undefined?'teal':''}">${esc(r.n)}<br><small>${r.i!==undefined?'Crew / HQ':'Aid'}</small></td><td>${r.m}</td><td>${fmt(r.t)}</td><td>${r.cut?fmt(r.cut):'—'}</td></tr>`).join('')}</tbody></table></section>`}else{html=`<section><h2>Station notes</h2><label for="notes">Welfare, food taken, kit changes, water stock and crew actions</label><textarea id="notes" rows="6" oninput="log().notes=this.value;save()">${esc(l.notes)}</textarea><p>Notes are stored on this device where supported.</p><button onclick="exportLog()">Export all station logs</button></section>`}if(tab==='Progress')html+=`<section><h2>Station notes</h2><textarea aria-label="Station notes" rows="3" oninput="log().notes=this.value;save()">${esc(l.notes)}</textarea><button onclick="exportLog()">Export logs</button>${i<last?'<p><button onclick="choose(state.i+1);window.scrollTo(0,0)">Next crew station →</button></p>':''}</section><section class="hero"><small class="teal">CURRENT STATION · BASELINE PLAN</small><div class="grid">${metric('Planned arrival',fmt(times[i]))}${metric('Planned departure',fmt(plan))}</div><p><strong>Planned stop:</strong> ${stops[i]} min · ${esc(crew[i].stop_category||'')}</p><p><strong>Purpose:</strong> ${esc(crew[i].stop_purpose||'')}</p>${crew[i].optional_nap_min?`<p class="amber">${esc(crew[i].nap_guidance)}</p>`:''}<p><strong>Prepare:</strong> ${esc(meals[i])}</p></section><section><small class="teal">NAMED RESPONSIBILITIES</small><h2>Crew tasks</h2>${crewTaskHtml(i,l)}</section>${stationOps(i,l)}${reviewHtml(i,l)}${(!state.crewFilter||state.crewFilter==="All crew")?`<section><small class="teal">BEFORE BEN ARRIVES</small><h2>Equipment reference – all crew</h2><p>${esc(crew[i].pre_arrival_setup||"To agree")}</p>${(crew[i].equipment_setup||"").split("; ").filter(Boolean).map(item=>`<div class="line">${esc(item)}</div>`).join("")}<p class="amber">Set up only where permitted and safe. Keep road access clear; stove outdoors only.</p></section><section><small class="teal">PREPARATION & HANDOVER</small><h2>${i===0?'Start pack':i===last?'Finish bag':'Food bag '+String(i).padStart(2,'0')}</h2><p>${esc(crewActions[i]).replace(/\n/g,'<br>')}</p>${food[i]?['Rice blocks','Soreen portions','Potato portions','Honey sandwich halves','Marmite sandwich halves','Gels'].map((n,j)=>`<div class="line"><span>${n}</span><strong>${food[i][j]}</strong></div>`).join(''):'<p>Warm drink, tolerated food, dry clothes and shoes.</p>'}<p>Plain refill: ${crew[i].plain_ml??'as needed (quantity TBC)'}${crew[i].plain_ml!=null?' ml':''}; electrolyte: ${crew[i].electrolyte_ml??'as needed (quantity TBC)'}${crew[i].electrolyte_ml!=null?' ml':''}.</p></section><section><p class="amber">Confusion, collapse or serious deterioration: seek medical help; emergency 999.</p></section>`:state.crewFilter==="Harry"?`<section><h2>Food and hydration reference</h2>${food[i]?["Rice blocks","Soreen portions","Potato portions","Honey sandwich halves","Marmite sandwich halves","Gels"].map((n,j)=>`<div class="line">${n}: ${food[i][j]}</div>`).join(""):"Recovery supplies"}</section>`:""}`;
-$('view').innerHTML=html;
+$('view').innerHTML=tab==='Overview'?drivingPlanHtml()+html:html;
+tickCrewCountdown();
 save()}
 function record(){let a=$('arr').value,d=$('dep').value;if(!a||!d||mins(d)<mins(a)||mins(a)<420||mins(d)>4320){alert('Enter valid GMT arrival and departure times in race order.');return}log().arrival=a;log().departure=d;save();render()}function resetTimes(){delete log().arrival;delete log().departure;save();render()}
 state.preparation=state.preparation||{};
@@ -93,6 +102,98 @@ function handoverSummary(i){
   const bag=crew[i].bag_id;
   return `<section><h3>Handover at a glance</h3><p>${bag?`<strong>Bag ${esc(bag)}</strong> · `:''}${esc(meals[i])}</p></section>`;
 }
+function crewTiming(i) {
+  const j = nextCrewIndex(i);
+  if (j < 0) return;
+  const from = crew[i], to = crew[j];
+  const leg = driveLegs.find(l => l.from === from.checkpoint_id && l.to === to.checkpoint_id);
+  const saved = state.driveAllowances?.[from.checkpoint_id + ':' + to.checkpoint_id] ?? {};
+  const drive = saved.drive ?? leg?.drive ?? leg?.estimate ?? null;
+  const setup = saved.setup ?? leg?.setup ?? 10;
+  const early = saved.early ?? 15;
+  const logged = log().departure ? mins(log().departure) : null;
+  const actual = Number.isFinite(logged) && Number.isFinite(from.departure32_min);
+  const eta = Number.isFinite(times[j]) ? times[j] + (actual ? logged - from.departure32_min : 0) : null;
+  const ready = eta === null ? null : eta - early;
+  const leave = ready === null || drive === null ? null : ready - drive - setup;
+  const origin = driveLegs.find(l => l.from === from.checkpoint_id);
+  const destination = driveLegs.find(l => l.to === to.checkpoint_id);
+  const url = leg?.url ?? (origin && destination ? 'https://www.google.com/maps/dir/?api=1&origin=' +
+    encodeURIComponent(new URL(origin.url).searchParams.get('origin')) + '&destination=' +
+    encodeURIComponent(new URL(destination.url).searchParams.get('destination')) + '&travelmode=driving' : '');
+  return {from,to,leg,drive,setup,early,actual,eta,ready,leave,url};
+}
+function saveDriveAllowance(key, input) {
+  const timing = crewTiming(state.i);
+  if (!timing) return;
+  const route = timing.from.checkpoint_id + ':' + timing.to.checkpoint_id;
+  const value = input.value === '' ? null : input.valueAsNumber;
+  if (value !== null && (!Number.isInteger(value) || value < 0 || value > 600)) {
+    input.reportValidity();
+    return;
+  }
+  state.driveAllowances ??= {};
+  state.driveAllowances[route] ??= {};
+  if (value === null) delete state.driveAllowances[route][key];
+  else state.driveAllowances[route][key] = value;
+  save();
+  render();
+}
+function crewTimingCard(i) {
+  const t = crewTiming(i);
+  if (!t) return '';
+  const input = (label,key,value) => `<label>${label}<input type="number" min="0" max="600" step="1" inputmode="numeric" value="${value ?? ''}" onchange="saveDriveAllowance('${key}',this)"></label>`;
+  return `<section class="crew-countdown"><h2>How long have we got?</h2>
+    <p><strong>${esc(crewStopLabel(t.to))}</strong></p>
+    <p id="crew-countdown-value" class="countdown-value"></p><p id="crew-countdown-slack"></p>
+    <p>Ben expected ${fmt(t.eta)} · Ready by ${fmt(t.ready)} · Leave by ${fmt(t.leave)}</p>
+    <small>${t.actual ? 'ETA adjusted from Ben’s recorded departure.' : 'ETA based on the race plan.'} ${t.leg ? `Road estimate ${t.leg.estimate} min, excluding live traffic.` : 'No road estimate for this leg. Enter a driving allowance.'}</small>
+    ${t.to.checkpoint_id==='crew-12'?'<p class="amber">Hotel car park permission to be confirmed.</p>':''}
+    ${t.url?`<p><a href="${esc(t.url)}" target="_blank" rel="noopener">Driving directions from this stop</a></p>`:''}
+    <div class="crew-allowances">${input('Drive (min)','drive',t.drive)}${input('Park, walk and set up (min)','setup',t.setup)}${input('Early-arrival buffer (min)','early',t.early)}</div>
+    <small>Adjustments are saved on this phone.</small></section>`;
+}
+function tickCrewCountdown() {
+  const headline = $('crew-countdown-value'), slack = $('crew-countdown-slack');
+  if (!headline || !slack) return;
+  const t = crewTiming(state.i);
+  if (!t) return;
+  const clock = (Date.now() - Date.UTC(2026,11,5))/60000;
+  const raceDay = clock >= 420 && clock < 2880;
+  const reference = raceDay ? clock : t.from.departure32_min;
+  if (t.ready === null || !Number.isFinite(reference)) {
+    headline.textContent = 'Time available to confirm';
+    slack.textContent = t.eta === null ? 'Ben’s next arrival estimate is missing.' : 'Planned departure from this stop is missing.';
+    return;
+  }
+  const available = Math.ceil(t.ready - reference);
+  headline.textContent = raceDay
+    ? available > 0 ? `${available} min until we need to be ready` : 'Ready-by time reached'
+    : `${Math.max(0,available)} min to get ready after planned departure`;
+  if (t.leave === null) {
+    slack.textContent = 'Add a drive allowance to calculate when to leave.';
+    return;
+  }
+  const remaining = Math.floor(t.leave - reference);
+  const travel = `${t.drive + t.setup} min to drive, park and set up.`;
+  slack.textContent = remaining > 0 ? `${travel} ${remaining} min ${raceDay ? 'left to pack up' : 'spare in the plan'}.`
+    : remaining === 0 ? `${travel} ${raceDay ? 'Leave now.' : 'Plan to leave straight away.'}`
+    : `${travel} ${Math.abs(remaining)} min short of set-up time. ${raceDay ? 'Leave now if safe.' : ''}`;
+}
+function crewStopLabel(stop) {
+  return stop.type === 'Crew' ? `${stop.checkpoint_id.slice(-2)} · ${stop.name}` : stop.name;
+}
+function drivingPlanHtml() {
+  const rows = driveLegs.map(l=>{
+    const from = crew.find(r=>r.checkpoint_id===l.from), to = crew.find(r=>r.checkpoint_id===l.to);
+    const available = Number.isFinite(from.departure32_min) && Number.isFinite(to.arrival32_min);
+    return `<div class="line"><div><strong>${esc(crewStopLabel(from))} → ${esc(crewStopLabel(to))}</strong>
+      <br><small>Ben expected ${fmt(to.arrival32_min)}${available ? ` · ${to.arrival32_min-from.departure32_min} min after planned departure` : ''}</small>
+      ${l.to==='crew-12'?'<br><small class="amber">Hotel parking permission pending</small>':''}</div>
+      <div><strong>${l.estimate} min</strong><br><small>${l.miles.toFixed(1)} road mi</small><br><a href="${esc(l.url)}" target="_blank" rel="noopener">Directions</a></div></div>`;
+  });
+  return `<section><h2>Crew driving plan</h2><p>All 16 legs. Road estimates exclude live traffic and set-up.</p>${rows.join('')}<small>Plumpton uses the racecourse pin. Check the event parking entrance.</small></section>`;
+}
 function nextCrewSummary(i,dep,delay){
   const j=nextCrewIndex(i);
   if(j<0)return '';
@@ -107,6 +208,7 @@ function nextCrewSummary(i,dep,delay){
 function stationOps(i,l){return '<section><h2>Station status and timer</h2><select onchange="log().status=this.value;save();render()">'+['Planned','Completed','Skipped','Inaccessible'].map(v=>'<option '+((l.status||'Planned')===v?'selected':'')+'>'+v+'</option>').join('')+'</select><p><button onclick="log().timer=Date.now();save();render()">Start stop timer</button> <button onclick="delete log().timer;save();render()">Reset</button></p><p id="stopTimer"></p>'+(['Skipped','Inaccessible'].includes(l.status)?'<p class="amber">Confirm next permitted meeting point, contact Ben if possible, check tracker, transfer food/flasks and kit changes to next accessible stop. Do not assume supplies are adequate.</p><textarea placeholder="Transfer and contact plan" oninput="log().transfer=this.value;save()">'+esc(l.transfer||'')+'</textarea>':'')+'</section>'}
 function tickStop(){let e=$('stopTimer');if(!e)return;let l=log();if(!l.timer){e.textContent="Timer not started";return}let n=Math.max(0,Math.floor((Date.now()-l.timer)/1000)),left=stops[state.i]*60-n;e.textContent=(left<0?"Over plan: ":"Remaining: ")+Math.floor(Math.abs(left)/60)+":"+String(Math.abs(left)%60).padStart(2,"0")+" · Safety first";}
 setInterval(tickStop,1000);
+setInterval(tickCrewCountdown,1000);
 function stageState(id){return state.preparation[id]||(state.preparation[id]={});}
 function showPage(page){
  $('raceView').hidden=page!=='race'&&page!=='schedule';$('prepView').hidden=!$('raceView').hidden;
